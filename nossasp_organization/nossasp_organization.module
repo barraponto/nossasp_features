@@ -1,0 +1,3 @@
+<?php
+
+include_once('nossasp_organization.features.inc');
