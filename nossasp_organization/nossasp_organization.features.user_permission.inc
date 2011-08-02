@@ -20,7 +20,6 @@ function nossasp_organization_user_default_permissions() {
     'name' => 'delete own nossasp_organization content',
     'roles' => array(
       '0' => 'administrator',
-      '1' => 'authenticated user',
     ),
   );
 
