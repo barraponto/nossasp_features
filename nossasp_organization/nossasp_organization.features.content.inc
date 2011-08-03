@@ -11,27 +11,28 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_address',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
+      'weight' => '31',
+      'parent' => '',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
+        'format' => 'hidden',
+        'exclude' => 1,
       ),
       'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
+        'format' => 'openlayers_map_nossasp',
         'exclude' => 0,
       ),
       '2' => array(
-        'format' => 'default',
-        'exclude' => 0,
+        'format' => 'hidden',
+        'exclude' => 1,
       ),
       '3' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      '4' => array(
         'format' => 'default',
         'exclude' => 0,
       ),

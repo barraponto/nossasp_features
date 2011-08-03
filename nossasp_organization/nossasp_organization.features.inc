@@ -5,7 +5,10 @@
  */
 function nossasp_organization_ctools_plugin_api() {
   list($module, $api) = func_get_args();
-  if ($module == "strongarm" && $api == "strongarm") {
+  if ($module == "openlayers" && $api == "openlayers_presets") {
+    return array("version" => 1);
+  }
+  elseif ($module == "strongarm" && $api == "strongarm") {
     return array("version" => 1);
   }
 }
@@ -28,4 +31,13 @@ function nossasp_organization_node_info() {
     ),
   );
   return $items;
+}
+
+/**
+ * Implementation of hook_views_api().
+ */
+function nossasp_organization_views_api() {
+  return array(
+    'api' => '2',
+  );
 }
