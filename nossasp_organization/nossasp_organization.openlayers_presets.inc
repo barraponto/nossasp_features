@@ -21,8 +21,8 @@ function nossasp_organization_openlayers_presets() {
     'hide_empty_map' => 1,
     'center' => array(
       'initial' => array(
-        'centerpoint' => '',
-        'zoom' => '15',
+        'centerpoint' => '-46.6342982, -23.5505233',
+        'zoom' => '13',
       ),
       'restrict' => array(
         'restrictextent' => 0,
