@@ -1,3 +1,12 @@
 <?php
 
 include_once('nossasp_mantainer.features.inc');
+
+function nossasp_mantainer_form_user_register_alter(&$form, &$form_state) {
+  $form['#pre_render'][] = 'nossasp_mantainer_change_weights';
+}
+
+function nossasp_mantainer_change_weights(&$elements) {
+  $elements['title']['#weight'] = 0;
+  return $elements;
+}
