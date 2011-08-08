@@ -15,9 +15,25 @@ function nossasp_organization_user_default_permissions() {
     ),
   );
 
+  // Exported permission: delete any nossasp_organization content
+  $permissions['delete any nossasp_organization content'] = array(
+    'name' => 'delete any nossasp_organization content',
+    'roles' => array(
+      '0' => 'administrator',
+    ),
+  );
+
   // Exported permission: delete own nossasp_organization content
   $permissions['delete own nossasp_organization content'] = array(
     'name' => 'delete own nossasp_organization content',
+    'roles' => array(
+      '0' => 'administrator',
+    ),
+  );
+
+  // Exported permission: edit any nossasp_organization content
+  $permissions['edit any nossasp_organization content'] = array(
+    'name' => 'edit any nossasp_organization content',
     'roles' => array(
       '0' => 'administrator',
     ),
