@@ -1,0 +1,11 @@
+<?php
+
+function nossasp_controller_install() {
+  module_load_include('inc', 'nossasp_controller', 'nossasp_controller.strongarm');
+
+  $variables = nossasp_controller_strongarm();
+
+  foreach ($variables as $variable) {
+    variable_set($variable->name, $variable->value);
+  }
+}
