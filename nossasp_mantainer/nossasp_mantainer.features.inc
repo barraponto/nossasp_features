@@ -16,13 +16,13 @@ function nossasp_mantainer_ctools_plugin_api() {
 function nossasp_mantainer_node_info() {
   $items = array(
     'nossasp_mantainer' => array(
-      'name' => t('nossasp_mantainer'),
+      'name' => t('Mantenedor'),
       'module' => 'features',
-      'description' => '',
+      'description' => t('Perfil dos mantenedores, responsáveis por informar e atualizar os dados das organizações que representam.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
-      'has_body' => '1',
-      'body_label' => t('Body'),
+      'title_label' => t('Nome'),
+      'has_body' => '0',
+      'body_label' => '',
       'min_word_count' => '0',
       'help' => '',
     ),
