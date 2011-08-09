@@ -3,8 +3,8 @@
 /**
  *  * Implementation of hook_install().
  *   */
-function nossasp_mantainer_registration_install() {
+function nossasp_mantainer_install() {
   // Set the weight to 2, so we are altering the form after content_profile_registration
-  db_query("UPDATE {system} SET weight = 1 WHERE name = 'nossasp_mantainer'");
+  db_query("UPDATE {system} SET weight = 2 WHERE name = 'nossasp_mantainer'");
 }
      
