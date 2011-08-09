@@ -2,8 +2,10 @@
 
 include_once('nossasp_mantainer.features.inc');
 
-function nossasp_mantainer_form_user_register_alter(&$form, &$form_state) {
-  $form['#pre_render'][] = 'nossasp_mantainer_alter_weights';
+function nossasp_mantainer_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'user_register') {
+    $form['#pre_render'][] = 'nossasp_mantainer_alter_weights';
+  }
 }
 
 function nossasp_mantainer_alter_weights(&$elements) {
