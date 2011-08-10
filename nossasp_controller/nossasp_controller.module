@@ -1,3 +1,16 @@
 <?php
 
 include_once('nossasp_controller.features.inc');
+
+function nossasp_controller_menu() {
+  $items['admin/nossasp'] = array(
+    'title' => 'Nossa São Paulo',
+    'position' => 'left',
+    'access callback' => TRUE,
+    'page callback' => 'system_admin_menu_block_page', 
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  );
+
+  return $items;
+}
