@@ -120,8 +120,46 @@ function nossasp_mantainer_views_default_views() {
       'field' => 'created',
       'relationship' => 'none',
     ),
+    'status' => array(
+      'label' => 'Active',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'type' => 'yes-no',
+      'not' => 0,
+      'exclude' => 0,
+      'id' => 'status',
+      'table' => 'users',
+      'field' => 'status',
+      'relationship' => 'none',
+    ),
   ));
   $handler->override_option('sorts', array(
+    'status' => array(
+      'order' => 'ASC',
+      'id' => 'status',
+      'table' => 'users',
+      'field' => 'status',
+      'relationship' => 'none',
+    ),
     'created' => array(
       'order' => 'DESC',
       'granularity' => 'second',
@@ -155,6 +193,24 @@ function nossasp_mantainer_views_default_views() {
       'field' => 'uid',
       'relationship' => 'none',
     ),
+    'rid' => array(
+      'operator' => 'not',
+      'value' => array(
+        '3' => '3',
+        '4' => '4',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'rid',
+      'table' => 'users_roles',
+      'field' => 'rid',
+      'relationship' => 'none',
+      'reduce_duplicates' => 0,
+    ),
   ));
   $handler->override_option('access', array(
     'type' => 'perm',
@@ -163,6 +219,8 @@ function nossasp_mantainer_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
+  $handler->override_option('empty', 'Nenhum usuário se cadastrou no projeto ainda.');
+  $handler->override_option('empty_format', '1');
   $handler->override_option('items_per_page', 25);
   $handler->override_option('use_pager', '1');
   $handler->override_option('style_plugin', 'bulk');
