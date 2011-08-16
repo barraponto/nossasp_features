@@ -12,14 +12,14 @@ function nossasp_organization_strongarm() {
   $strongarm->name = 'content_extra_weights_nossasp_organization';
   $strongarm->value = array(
     'title' => '-5',
-    'body_field' => '0',
-    'revision_information' => '20',
-    'author' => '20',
-    'options' => '25',
-    'menu' => '-2',
-    'taxonomy' => '-3',
-    'path' => '30',
-    'path_redirect' => '30',
+    'body_field' => '-1',
+    'revision_information' => '0',
+    'author' => '1',
+    'options' => '2',
+    'menu' => '-3',
+    'taxonomy' => '-4',
+    'path' => '3',
+    'path_redirect' => '4',
   );
   $export['content_extra_weights_nossasp_organization'] = $strongarm;
 
