@@ -147,7 +147,8 @@ function nossasp_organization_views_default_views() {
     ),
   ));
   $handler->override_option('access', array(
-    'type' => 'none',
+    'type' => 'perm',
+    'perm' => 'override nossasp_organization published option',
   ));
   $handler->override_option('cache', array(
     'type' => 'none',
@@ -467,18 +468,18 @@ function nossasp_organization_views_default_views() {
       'field' => 'type',
       'relationship' => 'none',
     ),
-    'status' => array(
+    'status_extra' => array(
       'operator' => '=',
-      'value' => '1',
+      'value' => '',
       'group' => '0',
       'exposed' => FALSE,
       'expose' => array(
         'operator' => FALSE,
         'label' => '',
       ),
-      'id' => 'status',
+      'id' => 'status_extra',
       'table' => 'node',
-      'field' => 'status',
+      'field' => 'status_extra',
       'relationship' => 'none',
     ),
   ));

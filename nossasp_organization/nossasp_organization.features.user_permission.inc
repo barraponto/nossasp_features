@@ -20,6 +20,7 @@ function nossasp_organization_user_default_permissions() {
     'name' => 'delete any nossasp_organization content',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'manager',
     ),
   );
 
@@ -28,6 +29,7 @@ function nossasp_organization_user_default_permissions() {
     'name' => 'delete own nossasp_organization content',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'manager',
     ),
   );
 
@@ -36,6 +38,7 @@ function nossasp_organization_user_default_permissions() {
     'name' => 'edit any nossasp_organization content',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'manager',
     ),
   );
 
@@ -45,6 +48,15 @@ function nossasp_organization_user_default_permissions() {
     'roles' => array(
       '0' => 'administrator',
       '1' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: override nossasp_organization published option
+  $permissions['override nossasp_organization published option'] = array(
+    'name' => 'override nossasp_organization published option',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'manager',
     ),
   );
 

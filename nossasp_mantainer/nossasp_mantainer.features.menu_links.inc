@@ -6,11 +6,11 @@
 function nossasp_mantainer_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: set-mantainer:node
-  $menu_links['set-mantainer:node'] = array(
+  // Exported menu link: set-mantainer:admin/nossasp/update
+  $menu_links['set-mantainer:admin/nossasp/update'] = array(
     'menu_name' => 'set-mantainer',
-    'link_path' => 'node',
-    'router_path' => 'node',
+    'link_path' => 'admin/nossasp/update',
+    'router_path' => 'admin/nossasp/update',
     'link_title' => 'Atualizar Organizações Cadastradas',
     'options' => array(),
     'module' => 'toolbar',

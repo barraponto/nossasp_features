@@ -15,12 +15,28 @@ function nossasp_mantainer_user_default_permissions() {
     ),
   );
 
+  // Exported permission: delete any nossasp_mantainer content
+  $permissions['delete any nossasp_mantainer content'] = array(
+    'name' => 'delete any nossasp_mantainer content',
+    'roles' => array(
+      '0' => 'administrator',
+    ),
+  );
+
   // Exported permission: delete own nossasp_mantainer content
   $permissions['delete own nossasp_mantainer content'] = array(
     'name' => 'delete own nossasp_mantainer content',
     'roles' => array(
       '0' => 'administrator',
-      '1' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: edit any nossasp_mantainer content
+  $permissions['edit any nossasp_mantainer content'] = array(
+    'name' => 'edit any nossasp_mantainer content',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'manager',
     ),
   );
 
