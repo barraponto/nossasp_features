@@ -153,6 +153,7 @@ function nossasp_organization_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
+  $handler->override_option('title', 'Gerenciar organizações');
   $handler->override_option('empty', 'Nenhum conteúdo foi publicado na plataforma ainda.');
   $handler->override_option('empty_format', '1');
   $handler->override_option('items_per_page', 20);
