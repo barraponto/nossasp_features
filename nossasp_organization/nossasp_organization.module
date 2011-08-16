@@ -1,3 +1,10 @@
 <?php
 
 include_once('nossasp_organization.features.inc');
+
+function nossasp_organization_views_pre_render(&$view) {
+  if ($view->name == 'nossasp_organization_update_orgs') {
+    $empty_text= 'Você ainda não cadastrou nenhuma organização.'. ' ' . l('Que tal começar agora?','node/add/nossasp-organization');
+    $view->display_handler->set_option('empty', $empty_text);
+  }
+}
