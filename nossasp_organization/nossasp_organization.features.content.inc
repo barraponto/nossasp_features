@@ -141,6 +141,128 @@ function nossasp_organization_content_default_fields() {
     ),
   );
 
+  // Exported field: field_council
+  $fields['nossasp_organization-field_council'] = array(
+    'field_name' => 'field_council',
+    'type_name' => 'nossasp_organization',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '0|Não
+1|Conselho Municipal',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'default_value' => array(
+        '0' => array(
+          'value' => 0,
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Conselho Municipal',
+      'weight' => '14',
+      'description' => '',
+      'type' => 'optionwidgets_onoff',
+      'module' => 'optionwidgets',
+    ),
+  );
+
+  // Exported field: field_councilman_pre
+  $fields['nossasp_organization-field_councilman_pre'] = array(
+    'field_name' => 'field_councilman_pre',
+    'type_name' => 'nossasp_organization',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '1',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'rows' => 5,
+      'size' => '30',
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_councilman_pre][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Conselho',
+      'weight' => '16',
+      'description' => '',
+      'type' => 'text_textfield',
+      'module' => 'text',
+    ),
+  );
+
   // Exported field: field_email
   $fields['nossasp_organization-field_email'] = array(
     'field_name' => 'field_email',
@@ -190,7 +312,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Email',
-      'weight' => '6',
+      'weight' => '7',
       'description' => '',
       'type' => 'email_textfield',
       'module' => 'email',
@@ -260,7 +382,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Facebook',
-      'weight' => '8',
+      'weight' => '9',
       'description' => '',
       'type' => 'link',
       'module' => 'link',
@@ -330,7 +452,7 @@ function nossasp_organization_content_default_fields() {
       'year_range' => '-3:+3',
       'label_position' => 'above',
       'label' => 'Fim da Gestão',
-      'weight' => '16',
+      'weight' => '15',
       'description' => '',
       'type' => 'date_popup',
       'module' => 'date',
@@ -388,7 +510,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Telefone',
-      'weight' => '5',
+      'weight' => '6',
       'description' => '',
       'type' => 'phone_textfield',
       'module' => 'phone',
@@ -520,7 +642,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Twitter',
-      'weight' => '7',
+      'weight' => '8',
       'description' => '',
       'type' => 'link',
       'module' => 'link',
@@ -590,7 +712,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Site ou Blog',
-      'weight' => '9',
+      'weight' => '10',
       'description' => '',
       'type' => 'link',
       'module' => 'link',
@@ -599,6 +721,8 @@ function nossasp_organization_content_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Conselho');
+  t('Conselho Municipal');
   t('Email');
   t('Endereço');
   t('Facebook');
