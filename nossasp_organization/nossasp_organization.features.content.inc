@@ -267,6 +267,76 @@ function nossasp_organization_content_default_fields() {
     ),
   );
 
+  // Exported field: field_gestao
+  $fields['nossasp_organization-field_gestao'] = array(
+    'field_name' => 'field_gestao',
+    'type_name' => 'nossasp_organization',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'date',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'date',
+    'active' => '1',
+    'granularity' => array(
+      'year' => 'year',
+      'month' => 'month',
+      'day' => 'day',
+    ),
+    'timezone_db' => '',
+    'tz_handling' => 'none',
+    'todate' => '',
+    'repeat' => 0,
+    'repeat_collapsed' => '',
+    'default_format' => 'short',
+    'widget' => array(
+      'default_value' => 'blank',
+      'default_value_code' => '',
+      'default_value2' => 'blank',
+      'default_value_code2' => '',
+      'input_format' => 'j F Y',
+      'input_format_custom' => '',
+      'increment' => '1',
+      'text_parts' => array(),
+      'year_range' => '-3:+3',
+      'label_position' => 'above',
+      'label' => 'Fim da Gestão',
+      'weight' => '16',
+      'description' => '',
+      'type' => 'date_popup',
+      'module' => 'date',
+    ),
+  );
+
   // Exported field: field_phone
   $fields['nossasp_organization-field_phone'] = array(
     'field_name' => 'field_phone',
@@ -532,6 +602,7 @@ function nossasp_organization_content_default_fields() {
   t('Email');
   t('Endereço');
   t('Facebook');
+  t('Fim da Gestão');
   t('Site ou Blog');
   t('Telefone');
   t('Tipo de Organização');

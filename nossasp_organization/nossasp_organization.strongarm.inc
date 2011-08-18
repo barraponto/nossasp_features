@@ -157,12 +157,21 @@ function nossasp_organization_strongarm() {
       'has_required' => FALSE,
       'title' => 'Área de Atuação',
       'hidden' => 0,
+      'collapsed' => 0,
     ),
     'group_tipo' => array(
       'region' => 'right',
       'weight' => '1',
       'has_required' => TRUE,
       'title' => 'Tipo de Organização',
+      'collapsed' => 0,
+    ),
+    'group_gestao' => array(
+      'region' => 'main',
+      'weight' => '2.9',
+      'has_required' => FALSE,
+      'title' => 'Gestão',
+      'hidden' => 0,
     ),
   );
   $export['nodeformscols_field_placements_nossasp_organization_default'] = $strongarm;
