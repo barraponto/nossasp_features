@@ -79,6 +79,68 @@ function nossasp_organization_content_default_fields() {
     ),
   );
 
+  // Exported field: field_atuacao
+  $fields['nossasp_organization-field_atuacao'] = array(
+    'field_name' => 'field_atuacao',
+    'type_name' => 'nossasp_organization',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'content_taxonomy',
+    'required' => '0',
+    'multiple' => '1',
+    'module' => 'content_taxonomy',
+    'active' => '1',
+    'save_term_node' => 0,
+    'vid' => '1',
+    'parent' => '0',
+    'parent_php_code' => '',
+    'depth' => '',
+    'widget' => array(
+      'group_parent' => '0',
+      'show_depth' => 0,
+      'default_value' => array(
+        '0' => array(
+          'value' => NULL,
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Área de Atuação',
+      'weight' => '10',
+      'description' => 'Marque todas as áreas em que a organização atua.',
+      'type' => 'content_taxonomy_options',
+      'module' => 'content_taxonomy_options',
+    ),
+  );
+
   // Exported field: field_email
   $fields['nossasp_organization-field_email'] = array(
     'field_name' => 'field_email',
@@ -263,6 +325,68 @@ function nossasp_organization_content_default_fields() {
     ),
   );
 
+  // Exported field: field_tipo
+  $fields['nossasp_organization-field_tipo'] = array(
+    'field_name' => 'field_tipo',
+    'type_name' => 'nossasp_organization',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'content_taxonomy',
+    'required' => '1',
+    'multiple' => '0',
+    'module' => 'content_taxonomy',
+    'active' => '1',
+    'save_term_node' => 0,
+    'vid' => '2',
+    'parent' => '0',
+    'parent_php_code' => '',
+    'depth' => '',
+    'widget' => array(
+      'group_parent' => '0',
+      'show_depth' => 1,
+      'default_value' => array(
+        '0' => array(
+          'value' => '17',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Tipo de Organização',
+      'weight' => '11',
+      'description' => '',
+      'type' => 'content_taxonomy_options',
+      'module' => 'content_taxonomy_options',
+    ),
+  );
+
   // Exported field: field_twitter
   $fields['nossasp_organization-field_twitter'] = array(
     'field_name' => 'field_twitter',
@@ -410,7 +534,9 @@ function nossasp_organization_content_default_fields() {
   t('Facebook');
   t('Site ou Blog');
   t('Telefone');
+  t('Tipo de Organização');
   t('Twitter');
+  t('Área de Atuação');
 
   return $fields;
 }
