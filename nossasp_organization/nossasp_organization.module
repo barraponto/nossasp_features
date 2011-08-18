@@ -16,26 +16,6 @@ function nossasp_organization_perm() {
 function nossasp_organization_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'nossasp_organization_node_form') {
     $form['field_tipo']['#title'] = $form['field_atuacao']['#title'] = FALSE;
-    $form['field_tipo']['#title'] = $form['field_atuacao']['#title'] = FALSE;
-    $form['#after_build'][] = 'nossasp_organization_hide_councils';
-    $form['#validate'][] = 'nossasp_organization_validate_councils';
   }
 }
 
-function nossasp_organization_hide_councils($form, &$form_state) {
-
-  if (!user_access('create municipal councils')) {
-    unset($form['group_tipo']['field_tipo']['value'][16]);
-  }
-
-  return $form;
-
-}
-
-function nossasp_organization_validate_councils($form, &$form_state) {
-  if (!(user_access('create municipal councils') && ($form_state['values']['field_tipo'][0] == '16'))) {
-
-    form_set_error(NULL, 'Seu formulário contém um erro. Por favor, copie seus textos e recarregue a página usando ctrl+f5. Se o erro persistir, entre em contato com o administrador do site.');
-
-  }
-}
