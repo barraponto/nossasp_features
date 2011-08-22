@@ -14,6 +14,10 @@ function nossasp_organization_perm() {
 }
 
 function nossasp_organization_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-nossasp-organizations-map-page-2') {
+    $form['circle']['location']['#autocomplete_path'] = 'openlayers/geocoder/response';
+    drupal_add_css(drupal_get_path('module','nossasp_organization') . '/nossasp-organization-search.css');
+  }
   if ($form_id == 'nossasp_organization_node_form') {
     $form['field_tipo']['#title'] = $form['field_atuacao']['#title'] = FALSE;
   }
