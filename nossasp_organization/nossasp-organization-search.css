@@ -1,3 +1,22 @@
 .view-id-nossasp_organizations_map.view-display-id-page_2 .view-filters {
   padding: 0 1em;
 }
+
+.view-id-nossasp_organizations_map.view-display-id-page_2 .views-exposed-widgets {
+  position: relative;
+}
+.view-id-nossasp_organizations_map.view-display-id-page_2 .views-exposed-widget {
+  float: none;
+}
+.view-id-nossasp_organizations_map.view-display-id-page_2 .views-exposed-widget input {
+  width: auto;
+} 
+.view-id-nossasp_organizations_map.view-display-id-page_2 .views-exposed-widget .form-option {
+  float: left;
+  width: 33%;
+}
+.view-id-nossasp_organizations_map.view-display-id-page_2 .views-exposed-widget:last-child {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
