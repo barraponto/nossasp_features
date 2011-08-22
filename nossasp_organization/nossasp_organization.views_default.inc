@@ -749,36 +749,6 @@ function nossasp_organization_views_default_views() {
     ),
   ));
   $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'nossasp_organization' => 'nossasp_organization',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'status' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'relationship' => 'none',
-    ),
     'title' => array(
       'operator' => 'contains',
       'value' => '',
@@ -823,6 +793,39 @@ function nossasp_organization_views_default_views() {
       'relationship' => 'none',
       'reduce_duplicates' => 0,
     ),
+    'circle' => array(
+      'operator' => '<',
+      'value' => array(
+        'value' => '',
+        'min' => '',
+        'max' => '',
+        'location' => '',
+        'node' => '3',
+        'unit' => 'km',
+      ),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_unit' => 0,
+        'unit' => 'unit',
+        'use_location' => 1,
+        'location' => 'location',
+        'use_node' => 0,
+        'node' => 'node',
+        'use_operator' => 0,
+        'operator' => 'circle_op',
+        'identifier' => 'circle',
+        'label' => 'Busca por endereço',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+      ),
+      'location_as' => 'location',
+      'id' => 'circle',
+      'table' => 'openlayers_proximity',
+      'field' => 'circle',
+      'relationship' => 'none',
+    ),
   ));
   $handler->override_option('access', array(
     'type' => 'none',
@@ -830,7 +833,7 @@ function nossasp_organization_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
-  $handler->override_option('items_per_page', 30);
+  $handler->override_option('items_per_page', 1);
   $handler->override_option('style_plugin', 'openlayers_map');
   $handler->override_option('style_options', array(
     'preset' => 'nossasp',
