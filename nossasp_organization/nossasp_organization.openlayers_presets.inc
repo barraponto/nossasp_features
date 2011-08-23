@@ -71,7 +71,7 @@ function nossasp_organization_openlayers_presets() {
     'image_path' => '',
     'css_path' => '',
     'proxy_host' => '',
-    'hide_empty_map' => 1,
+    'hide_empty_map' => 0,
     'center' => array(
       'initial' => array(
         'centerpoint' => '-46.6342982, -23.5505233',
@@ -89,15 +89,14 @@ function nossasp_organization_openlayers_presets() {
           'nossasp_organizations_layer_openlayers_1' => 'nossasp_organizations_layer_openlayers_1',
         ),
       ),
-      'openlayers_behavior_layerswitcher' => array(
-        'ascending' => 1,
-        'roundedCorner' => 1,
-        'roundedCornerColor' => 'darkblue',
-      ),
       'openlayers_behavior_navigation' => array(
         'zoomWheelEnabled' => 1,
       ),
       'openlayers_behavior_panzoom' => array(),
+      'openlayers_behavior_zoomtolayer' => array(
+        'zoomtolayer' => 'nossasp_organizations_layer_openlayers_1',
+        'point_zoom_level' => '13',
+      ),
     ),
     'default_layer' => 'osm_mapnik',
     'layers' => array(
