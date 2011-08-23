@@ -18,15 +18,17 @@ function nossasp_organization_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'description' => '',
+        'weight' => '11',
+        'label' => 'hidden',
         'teaser' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
+          'format' => 'hidden',
+          'exclude' => 1,
         ),
         'full' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
+          'format' => 'hidden',
+          'exclude' => 1,
         ),
+        'description' => '',
         '4' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -43,10 +45,9 @@ function nossasp_organization_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
-        'label' => 'above',
       ),
     ),
-    'weight' => '11',
+    'weight' => '6',
     'fields' => array(
       '0' => 'field_atuacao',
     ),
@@ -64,15 +65,17 @@ function nossasp_organization_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'description' => '',
+        'weight' => '5',
+        'label' => 'above',
         'teaser' => array(
           'format' => 'fieldset',
-          'exclude' => 0,
+          'exclude' => 1,
         ),
         'full' => array(
           'format' => 'fieldset',
           'exclude' => 0,
         ),
+        'description' => '',
         '4' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -89,10 +92,9 @@ function nossasp_organization_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
-        'label' => 'above',
       ),
     ),
-    'weight' => '5',
+    'weight' => '7',
     'fields' => array(
       '0' => 'field_phone',
       '1' => 'field_email',
@@ -114,15 +116,17 @@ function nossasp_organization_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'description' => '',
+        'weight' => '16',
+        'label' => 'above',
         'teaser' => array(
           'format' => 'fieldset',
-          'exclude' => 0,
+          'exclude' => 1,
         ),
         'full' => array(
           'format' => 'fieldset',
           'exclude' => 0,
         ),
+        'description' => '',
         '4' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -139,14 +143,13 @@ function nossasp_organization_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
-        'label' => 'above',
       ),
     ),
-    'weight' => '16',
+    'weight' => '8',
     'fields' => array(
       '0' => 'field_council',
-      '1' => 'field_gestao',
-      '2' => 'field_councilman_pre',
+      '1' => 'field_councilman_pre',
+      '2' => 'field_gestao',
     ),
   );
 
@@ -162,15 +165,17 @@ function nossasp_organization_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'description' => '',
+        'weight' => '12',
+        'label' => 'hidden',
         'teaser' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
+          'format' => 'hidden',
+          'exclude' => 1,
         ),
         'full' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
+          'format' => 'hidden',
+          'exclude' => 1,
         ),
+        'description' => '',
         '4' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -187,10 +192,9 @@ function nossasp_organization_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
-        'label' => 'above',
       ),
     ),
-    'weight' => '12',
+    'weight' => '-2',
     'fields' => array(
       '0' => 'field_tipo',
     ),

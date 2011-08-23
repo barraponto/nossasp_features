@@ -11,7 +11,7 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_address',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
-      'weight' => '31',
+      'weight' => '-2',
       'parent' => '',
       'label' => array(
         'format' => 'hidden',
@@ -72,7 +72,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Endereço',
-      'weight' => '-2',
+      'weight' => '-1',
       'description' => 'Entre o endereço da organização. Espere pelo recurso de autocompletar e escolha da lista.',
       'type' => 'openlayers_geocoder_widget',
       'module' => 'openlayers_geocoder',
@@ -84,9 +84,10 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_atuacao',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
+      'weight' => '10',
+      'parent' => 'group_atuacao',
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
@@ -146,17 +147,18 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_council',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
+      'weight' => '14',
+      'parent' => 'group_council',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
+        'format' => 'hidden',
+        'exclude' => 1,
       ),
       'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
+        'format' => 'hidden',
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -206,13 +208,14 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_councilman_pre',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
+      'weight' => '16',
+      'parent' => 'group_council',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'inline',
       ),
       'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
+        'format' => 'hidden',
+        'exclude' => 1,
       ),
       'full' => array(
         'format' => 'default',
@@ -256,7 +259,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Conselho',
-      'weight' => '16',
+      'weight' => '15',
       'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -268,13 +271,14 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_email',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
+      'weight' => '7',
+      'parent' => 'group_contact',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'inline',
       ),
       'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
+        'format' => 'hidden',
+        'exclude' => 1,
       ),
       'full' => array(
         'format' => 'default',
@@ -324,16 +328,17 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_facebook',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
+      'weight' => '9',
+      'parent' => 'group_contact',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'inline',
       ),
       'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
+        'format' => 'hidden',
+        'exclude' => 1,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'url',
         'exclude' => 0,
       ),
       '4' => array(
@@ -394,13 +399,14 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_gestao',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
+      'weight' => '15',
+      'parent' => 'group_council',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'inline',
       ),
       'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
+        'format' => 'hidden',
+        'exclude' => 1,
       ),
       'full' => array(
         'format' => 'default',
@@ -452,7 +458,7 @@ function nossasp_organization_content_default_fields() {
       'year_range' => '-3:+3',
       'label_position' => 'above',
       'label' => 'Fim da Gestão',
-      'weight' => '15',
+      'weight' => '16',
       'description' => '',
       'type' => 'date_popup',
       'module' => 'date',
@@ -464,13 +470,14 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_phone',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
+      'weight' => '6',
+      'parent' => 'group_contact',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'inline',
       ),
       'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
+        'format' => 'hidden',
+        'exclude' => 1,
       ),
       'full' => array(
         'format' => 'default',
@@ -522,17 +529,18 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_tipo',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
+      'weight' => '11',
+      'parent' => 'group_tipo',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
+        'format' => 'hidden',
+        'exclude' => 1,
       ),
       'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
+        'format' => 'hidden',
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -584,16 +592,17 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_twitter',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
+      'weight' => '8',
+      'parent' => 'group_contact',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'inline',
       ),
       'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
+        'format' => 'hidden',
+        'exclude' => 1,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'url',
         'exclude' => 0,
       ),
       '4' => array(
@@ -654,16 +663,17 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_website',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
+      'weight' => '10',
+      'parent' => 'group_contact',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'inline',
       ),
       'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
+        'format' => 'hidden',
+        'exclude' => 1,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'url',
         'exclude' => 0,
       ),
       '4' => array(
