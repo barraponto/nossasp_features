@@ -1209,60 +1209,6 @@ function nossasp_organization_views_default_views() {
       'relationship' => 'none',
     ),
   ));
-  $handler->override_option('arguments', array(
-    'name' => array(
-      'default_action' => 'default',
-      'style_plugin' => 'default_summary',
-      'style_options' => array(),
-      'wildcard' => 'all',
-      'wildcard_substitution' => 'All',
-      'title' => '',
-      'breadcrumb' => '',
-      'default_argument_type' => 'taxonomy_tid',
-      'default_argument' => '',
-      'validate_type' => 'none',
-      'validate_fail' => 'ignore',
-      'glossary' => 0,
-      'limit' => '0',
-      'case' => 'none',
-      'path_case' => 'none',
-      'transform_dash' => 0,
-      'add_table' => 0,
-      'require_value' => 0,
-      'id' => 'name',
-      'table' => 'term_data',
-      'field' => 'name',
-      'validate_user_argument_type' => 'uid',
-      'validate_user_roles' => array(
-        '2' => 0,
-        '3' => 0,
-        '4' => 0,
-      ),
-      'relationship' => 'none',
-      'default_options_div_prefix' => '',
-      'default_argument_fixed' => '',
-      'default_argument_user' => 0,
-      'default_argument_php' => '',
-      'validate_argument_node_type' => array(
-        'nossasp_organization' => 0,
-        'nossasp_mantainer' => 0,
-        'profile' => 0,
-      ),
-      'validate_argument_node_access' => 0,
-      'validate_argument_nid_type' => 'nid',
-      'validate_argument_vocabulary' => array(
-        '1' => 0,
-        '2' => 0,
-      ),
-      'validate_argument_type' => 'tid',
-      'validate_argument_transform' => 0,
-      'validate_user_restrict_roles' => 0,
-      'validate_argument_php' => '',
-      'override' => array(
-        'button' => 'Override',
-      ),
-    ),
-  ));
   $handler->override_option('filters', array(
     'type' => array(
       'operator' => 'in',
@@ -1303,7 +1249,7 @@ function nossasp_organization_views_default_views() {
         'use_operator' => 0,
         'operator' => 'title_op',
         'identifier' => 'title',
-        'label' => 'Busca',
+        'label' => '',
         'optional' => 1,
         'remember' => 0,
       ),
@@ -1311,6 +1257,39 @@ function nossasp_organization_views_default_views() {
       'id' => 'title',
       'table' => 'node',
       'field' => 'title',
+      'relationship' => 'none',
+    ),
+    'circle' => array(
+      'operator' => '<',
+      'value' => array(
+        'value' => '',
+        'min' => '',
+        'max' => '',
+        'location' => '',
+        'node' => '5',
+        'unit' => 'km',
+      ),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_unit' => 0,
+        'unit' => 'unit',
+        'use_location' => 1,
+        'location' => 'location',
+        'use_node' => 0,
+        'node' => 'node',
+        'use_operator' => 0,
+        'operator' => 'circle_op',
+        'identifier' => 'circle',
+        'label' => '',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+      ),
+      'location_as' => 'location',
+      'id' => 'circle',
+      'table' => 'openlayers_proximity',
+      'field' => 'circle',
       'relationship' => 'none',
     ),
     'tid' => array(
@@ -1322,7 +1301,7 @@ function nossasp_organization_views_default_views() {
         'use_operator' => 0,
         'operator' => 'tid_op',
         'identifier' => 'tid',
-        'label' => 'Área de Atuação',
+        'label' => '',
         'optional' => 1,
         'single' => 0,
         'remember' => 0,
@@ -1338,39 +1317,6 @@ function nossasp_organization_views_default_views() {
       'relationship' => 'none',
       'reduce_duplicates' => 0,
     ),
-    'circle' => array(
-      'operator' => '<',
-      'value' => array(
-        'value' => '',
-        'min' => '',
-        'max' => '',
-        'location' => '',
-        'node' => '3',
-        'unit' => 'km',
-      ),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_unit' => 0,
-        'unit' => 'unit',
-        'use_location' => 1,
-        'location' => 'location',
-        'use_node' => 0,
-        'node' => 'node',
-        'use_operator' => 0,
-        'operator' => 'circle_op',
-        'identifier' => 'circle',
-        'label' => 'Busca por endereço',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-      ),
-      'location_as' => 'location',
-      'id' => 'circle',
-      'table' => 'openlayers_proximity',
-      'field' => 'circle',
-      'relationship' => 'none',
-    ),
   ));
   $handler->override_option('access', array(
     'type' => 'none',
@@ -1378,7 +1324,9 @@ function nossasp_organization_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
+  $handler->override_option('use_ajax', TRUE);
   $handler->override_option('items_per_page', 30);
+  $handler->override_option('exposed_block', TRUE);
   $handler = $view->new_display('block', 'Block', 'block_1');
   $handler->override_option('block_description', '');
   $handler->override_option('block_caching', -1);
