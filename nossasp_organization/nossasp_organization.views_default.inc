@@ -811,7 +811,7 @@ function nossasp_organization_views_default_views() {
         'operator' => 'tid_op',
         'identifier' => 'tid',
         'label' => 'Área de Atuação',
-        'optional' => 0,
+        'optional' => 1,
         'single' => 0,
         'remember' => 0,
         'reduce' => 0,
@@ -823,6 +823,37 @@ function nossasp_organization_views_default_views() {
       'table' => 'term_node',
       'field' => 'tid',
       'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 0,
+      'override' => array(
+        'button' => 'Override',
+      ),
+    ),
+    'tid_1' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_1_op',
+        'identifier' => 'tid_1',
+        'label' => 'Tipos de Organização',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '2',
+      'id' => 'tid_1',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'override' => array(
+        'button' => 'Override',
+      ),
       'relationship' => 'none',
       'reduce_duplicates' => 0,
     ),
@@ -947,6 +978,46 @@ function nossasp_organization_views_default_views() {
       ),
       'relationship' => 'none',
     ),
+    'tid' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'type' => 'separator',
+      'separator' => ', ',
+      'link_to_taxonomy' => 0,
+      'limit' => 1,
+      'vids' => array(
+        '2' => 2,
+        '1' => 0,
+      ),
+      'exclude' => 0,
+      'id' => 'tid',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
   ));
   $handler->override_option('filters', array(
     'type' => array(
@@ -1055,6 +1126,31 @@ function nossasp_organization_views_default_views() {
       'table' => 'openlayers_proximity',
       'field' => 'circle',
       'relationship' => 'none',
+    ),
+    'tid_1' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_1_op',
+        'identifier' => 'tid_1',
+        'label' => '',
+        'optional' => 1,
+        'single' => 0,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '2',
+      'id' => 'tid_1',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'relationship' => 'none',
+      'reduce_duplicates' => 0,
     ),
   ));
   $handler->override_option('access', array(
@@ -1317,6 +1413,34 @@ function nossasp_organization_views_default_views() {
       'relationship' => 'none',
       'reduce_duplicates' => 0,
     ),
+    'tid_1' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'tid_1_op',
+        'identifier' => 'tid_1',
+        'label' => '',
+        'optional' => 1,
+        'single' => 0,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'type' => 'select',
+      'limit' => TRUE,
+      'vid' => '2',
+      'id' => 'tid_1',
+      'table' => 'term_node',
+      'field' => 'tid',
+      'hierarchy' => 0,
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+      'reduce_duplicates' => 0,
+    ),
   ));
   $handler->override_option('access', array(
     'type' => 'none',
@@ -1324,8 +1448,12 @@ function nossasp_organization_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
+  $handler->override_option('header', '.');
+  $handler->override_option('header_format', '2');
+  $handler->override_option('header_empty', 0);
   $handler->override_option('use_ajax', TRUE);
-  $handler->override_option('items_per_page', 30);
+  $handler->override_option('items_per_page', 6);
+  $handler->override_option('use_pager', '1');
   $handler->override_option('exposed_block', TRUE);
   $handler = $view->new_display('block', 'Block', 'block_1');
   $handler->override_option('block_description', '');
