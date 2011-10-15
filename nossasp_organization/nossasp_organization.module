@@ -23,6 +23,9 @@ function nossasp_organization_form_alter(&$form, &$form_state, $form_id) {
   }
   if ($form_id == 'nossasp_organization_node_form') {
     $form['field_tipo']['#title'] = $form['field_atuacao']['#title'] = FALSE;
+    if (user_access('create municipal councils')) {
+      drupal_add_js(drupal_get_path('module', 'nossasp_organization') . '/nossasp-organization-node-form.js');
+    }
   }
 }
 
