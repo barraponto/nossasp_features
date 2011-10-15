@@ -7,6 +7,10 @@ function nossasp_organization_views_pre_render(&$view) {
     $empty_text= 'Você ainda não cadastrou nenhuma organização.'. ' ' . l('Que tal começar agora?','node/add/nossasp-organization');
     $view->display_handler->set_option('empty', $empty_text);
   }
+  elseif ($view->name == 'nossasp_organizations_search_box') {
+    $header_text = count($view->result)  . ' resultados';
+    $view->display_handler->set_option('header', $header_text);
+  }
 }
 
 function nossasp_organization_perm() {
@@ -39,3 +43,4 @@ function nossasp_organization_exposed_search($form, &$form_state) {
 
   return $form;
 }
+
