@@ -978,8 +978,8 @@ function nossasp_organization_views_default_views() {
       ),
       'relationship' => 'none',
     ),
-    'tid' => array(
-      'label' => '',
+    'tid_2' => array(
+      'label' => 'Term ID',
       'alter' => array(
         'alter_text' => 0,
         'text' => '',
@@ -1001,21 +1001,46 @@ function nossasp_organization_views_default_views() {
       'empty' => '',
       'hide_empty' => 0,
       'empty_zero' => 0,
-      'type' => 'separator',
-      'separator' => ', ',
-      'link_to_taxonomy' => 0,
-      'limit' => 1,
-      'vids' => array(
-        '2' => 2,
-        '1' => 0,
-      ),
+      'set_precision' => FALSE,
+      'precision' => 0,
+      'decimal' => '.',
+      'separator' => ',',
+      'prefix' => '',
+      'suffix' => '',
       'exclude' => 0,
-      'id' => 'tid',
-      'table' => 'term_node',
+      'id' => 'tid_2',
+      'table' => 'term_data',
       'field' => 'tid',
-      'override' => array(
-        'button' => 'Override',
+      'relationship' => 'none',
+    ),
+    'tid_1' => array(
+      'label' => 'Primary Term: Term ID',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
       ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_taxonomy' => 1,
+      'exclude' => 0,
+      'id' => 'tid_1',
+      'table' => 'primary_term',
+      'field' => 'tid',
       'relationship' => 'none',
     ),
   ));
@@ -1161,6 +1186,7 @@ function nossasp_organization_views_default_views() {
   ));
   $handler->override_option('title', 'NossaSP Search Layer');
   $handler->override_option('items_per_page', 30);
+  $handler->override_option('distinct', 1);
   $handler->override_option('style_plugin', 'openlayers_data');
   $handler->override_option('style_options', array(
     'grouping' => '',
