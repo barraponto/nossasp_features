@@ -867,13 +867,10 @@ function nossasp_organization_views_default_views() {
   $handler->override_option('items_per_page', 1);
   $handler->override_option('style_plugin', 'openlayers_map');
   $handler->override_option('style_options', array(
-    'preset' => 'nossasp',
+    'preset' => 'nossasp_search',
   ));
   $handler->override_option('exposed_block', TRUE);
   $handler = $view->new_display('page', 'Page', 'page_2');
-  $handler->override_option('style_options', array(
-    'preset' => 'nossasp_search',
-  ));
   $handler->override_option('path', 'organizations/search');
   $handler->override_option('menu', array(
     'type' => 'normal',
