@@ -13,7 +13,7 @@ function nossasp_organization_openlayers_layers() {
   $openlayers_layers->title = 'NossaSP Distritos';
   $openlayers_layers->description = 'Camada de Distritos da cidade de São Paulo';
   $openlayers_layers->data = array(
-    'url' => 'profiles/nossasp/modules/nossasp_features/nossasp_organization/distritos.kml',
+    'url' => '/profiles/nossasp/modules/nossasp_features/nossasp_organization/distritos.kml',
     'formatOptions' => array(
       'extractStyles' => 1,
       'extractAttributes' => 1,

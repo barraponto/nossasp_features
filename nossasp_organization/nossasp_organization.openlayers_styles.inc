@@ -13,7 +13,7 @@ function nossasp_organization_openlayers_styles() {
   $openlayers_styles->title = 'NossaSP Icones';
   $openlayers_styles->description = 'Icones para as Organizações do Nossa São Paulo';
   $openlayers_styles->data = array(
-    'externalGraphic' => 'profiles/nossasp/modules/nossasp_features/nossasp_organization/icons/${tid_2}-${tid_1}.png',
+    'externalGraphic' => '/profiles/nossasp/modules/nossasp_features/nossasp_organization/icons/${tid_2}-${tid_1}.png',
     'pointRadius' => 16,
     'fillColor' => '#EE9900',
     'strokeColor' => '#EE9900',
