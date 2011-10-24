@@ -52,11 +52,6 @@ function nossasp_contexts_context_default_contexts() {
         1 => 1,
       ),
     ),
-    'path' => array(
-      'values' => array(
-        '<front>' => '<front>',
-      ),
-    ),
   );
   $context->reactions = array(
     'block' => array(
