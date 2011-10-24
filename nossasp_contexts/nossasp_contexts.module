@@ -1,3 +1,36 @@
 <?php
 
 include_once('nossasp_contexts.features.inc');
+
+function nossasp_contexts_context_registry() {
+  return array(
+    'conditions' => array(
+      'nossasp_contexts_search_results' => array(
+        'title' => t('Map search results'),
+        'description' => t('Set the condition if the results of a map search are being shown'),
+        'plugin' => 'nossasp_contexts_search_results_condition',
+      ), 
+    ), 
+  ); 
+}
+
+function nossasp_contexts_context_plugins() {
+  $plugins = array();
+  $plugins['nossasp_contexts_search_results_condition'] = array(
+    'handler' => array(
+      'path' => drupal_get_path('module', 'nossasp_contexts'),
+      'file' => 'nossasp_contexts.context.conditions.inc',
+      'class' => 'nossasp_contexts_search_results_condition',
+      'parent' => 'context_condition',
+    ),
+  );
+  return $plugins;
+}
+
+function nossasp_contexts_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+  if ($op == 'view' && $node->type == 'nossasp_organization' && (isset($_GET['circle']) || isset($_GET['title']))) {
+    if ($plugin = context_get_plugin('condition', 'nossasp_contexts_search_results')) {
+      $plugin->execute();
+    }
+  }
+}
