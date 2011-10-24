@@ -20,6 +20,7 @@ function nossasp_organization_strongarm() {
     'taxonomy' => '-4',
     'path' => '4',
     'path_redirect' => '5',
+    'primary_term' => '0',
   );
   $export['content_extra_weights_nossasp_organization'] = $strongarm;
 
@@ -50,7 +51,7 @@ function nossasp_organization_strongarm() {
     ),
     'body_field' => array(
       'region' => 'main',
-      'weight' => '2',
+      'weight' => '3',
       'has_required' => FALSE,
       'title' => NULL,
       'hidden' => 0,
@@ -152,6 +153,13 @@ function nossasp_organization_strongarm() {
       'weight' => '2',
       'has_required' => FALSE,
       'title' => 'Primary Term',
+      'hidden' => 0,
+    ),
+    'group_address' => array(
+      'region' => 'main',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Endereço',
       'hidden' => 0,
     ),
   );
