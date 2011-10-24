@@ -1,5 +1,6 @@
 core = "6.x"
 dependencies[] = "context"
+dependencies[] = "nossasp_organization"
 dependencies[] = "views"
 description = "nossasp_contexts"
 features[context][] = "nossasp_search_results"

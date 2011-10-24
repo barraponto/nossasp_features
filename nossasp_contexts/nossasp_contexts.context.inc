@@ -13,6 +13,14 @@ function nossasp_contexts_context_default_contexts() {
   $context->description = 'Resultados de busca do NossaSP';
   $context->tag = 'search';
   $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'nossasp_organization' => 'nossasp_organization',
+      ),
+      'options' => array(
+        'node_form' => '0',
+      ),
+    ),
     'views' => array(
       'values' => array(
         'nossasp_organizations_map' => 'nossasp_organizations_map',
@@ -26,7 +34,7 @@ function nossasp_contexts_context_default_contexts() {
           'module' => 'views',
           'delta' => 'ac1d059bc0aeabb5015c2d28f61ba744',
           'region' => 'sidebar_first',
-          'weight' => 0,
+          'weight' => 1,
         ),
       ),
     ),
@@ -61,11 +69,17 @@ function nossasp_contexts_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => 0,
         ),
+        'block-6' => array(
+          'module' => 'block',
+          'delta' => 6,
+          'region' => 'sidebar_first',
+          'weight' => 1,
+        ),
         'block-3' => array(
           'module' => 'block',
           'delta' => 3,
           'region' => 'sidebar_first',
-          'weight' => 1,
+          'weight' => 2,
         ),
         'views-e4d64b6a71c9049b9bdd1225e0da8e25' => array(
           'module' => 'views',
