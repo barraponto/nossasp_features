@@ -6,6 +6,149 @@
 function nossasp_organization_fieldgroup_default_groups() {
   $groups = array();
 
+  // Exported group: group_council_address
+  $groups['nossasp_council-group_council_address'] = array(
+    'group_type' => 'standard',
+    'type_name' => 'nossasp_council',
+    'group_name' => 'group_council_address',
+    'label' => 'Endereço',
+    'settings' => array(
+      'form' => array(
+        'style' => 'fieldset',
+        'description' => '',
+      ),
+      'display' => array(
+        'description' => '',
+        'label' => 'above',
+        'teaser' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'full' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '4' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '2' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '3' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'token' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+      ),
+    ),
+    'weight' => '14',
+    'fields' => array(
+      '0' => 'field_street',
+      '1' => 'field_zip',
+    ),
+  );
+
+  // Exported group: group_council_atuacao
+  $groups['nossasp_council-group_council_atuacao'] = array(
+    'group_type' => 'standard',
+    'type_name' => 'nossasp_council',
+    'group_name' => 'group_council_atuacao',
+    'label' => 'Área de Atuação',
+    'settings' => array(
+      'form' => array(
+        'style' => 'fieldset',
+        'description' => '',
+      ),
+      'display' => array(
+        'description' => '',
+        'label' => 'above',
+        'teaser' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'full' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '4' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '2' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '3' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'token' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+      ),
+    ),
+    'weight' => '6',
+    'fields' => array(
+      '0' => 'field_atuacao',
+    ),
+  );
+
+  // Exported group: group_council_contato
+  $groups['nossasp_council-group_council_contato'] = array(
+    'group_type' => 'standard',
+    'type_name' => 'nossasp_council',
+    'group_name' => 'group_council_contato',
+    'label' => 'Contato',
+    'settings' => array(
+      'form' => array(
+        'style' => 'fieldset',
+        'description' => '',
+      ),
+      'display' => array(
+        'description' => '',
+        'label' => 'above',
+        'teaser' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'full' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '4' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '2' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '3' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'token' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+      ),
+    ),
+    'weight' => '8',
+    'fields' => array(
+      '0' => 'field_phone',
+      '1' => 'field_email',
+      '2' => 'field_twitter',
+      '3' => 'field_facebook',
+      '4' => 'field_website',
+    ),
+  );
+
   // Exported group: group_address
   $groups['nossasp_organization-group_address'] = array(
     'group_type' => 'standard',
@@ -151,55 +294,6 @@ function nossasp_organization_fieldgroup_default_groups() {
     ),
   );
 
-  // Exported group: group_council
-  $groups['nossasp_organization-group_council'] = array(
-    'group_type' => 'standard',
-    'type_name' => 'nossasp_organization',
-    'group_name' => 'group_council',
-    'label' => 'Conselho Municipal',
-    'settings' => array(
-      'form' => array(
-        'style' => 'fieldset_collapsible',
-        'description' => '',
-      ),
-      'display' => array(
-        'weight' => '16',
-        'label' => 'above',
-        'teaser' => array(
-          'format' => 'fieldset',
-          'exclude' => 1,
-        ),
-        'full' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
-        ),
-        'description' => '',
-        '4' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
-        ),
-        '2' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
-        ),
-        '3' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
-        ),
-        'token' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
-        ),
-      ),
-    ),
-    'weight' => '8',
-    'fields' => array(
-      '0' => 'field_council',
-      '1' => 'field_councilman_pre',
-      '2' => 'field_gestao',
-    ),
-  );
-
   // Exported group: group_tipo
   $groups['nossasp_organization-group_tipo'] = array(
     'group_type' => 'standard',
@@ -249,7 +343,6 @@ function nossasp_organization_fieldgroup_default_groups() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Conselho Municipal');
   t('Contato');
   t('Endereço');
   t('Tipo de Organização');

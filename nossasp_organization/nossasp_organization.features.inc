@@ -24,6 +24,28 @@ function nossasp_organization_ctools_plugin_api() {
  */
 function nossasp_organization_node_info() {
   $items = array(
+    'nossasp_council' => array(
+      'name' => t('Conselho Municipal'),
+      'module' => 'features',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Nome'),
+      'has_body' => '1',
+      'body_label' => t('Descrição'),
+      'min_word_count' => '0',
+      'help' => '',
+    ),
+    'nossasp_councilman' => array(
+      'name' => t('Conselheiro'),
+      'module' => 'features',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Nome'),
+      'has_body' => '0',
+      'body_label' => '',
+      'min_word_count' => '0',
+      'help' => '',
+    ),
     'nossasp_organization' => array(
       'name' => t('Organização'),
       'module' => 'features',
