@@ -1475,7 +1475,7 @@ function nossasp_organization_views_default_views() {
   $handler->override_option('header_format', '2');
   $handler->override_option('header_empty', 0);
   $handler->override_option('use_ajax', TRUE);
-  $handler->override_option('items_per_page', 6);
+  $handler->override_option('items_per_page', 5);
   $handler->override_option('use_pager', '1');
   $handler->override_option('exposed_block', TRUE);
   $handler = $view->new_display('block', 'Block', 'block_1');
