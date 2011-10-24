@@ -6,6 +6,53 @@
 function nossasp_organization_fieldgroup_default_groups() {
   $groups = array();
 
+  // Exported group: group_address
+  $groups['nossasp_organization-group_address'] = array(
+    'group_type' => 'standard',
+    'type_name' => 'nossasp_organization',
+    'group_name' => 'group_address',
+    'label' => 'Endereço',
+    'settings' => array(
+      'form' => array(
+        'style' => 'fieldset',
+        'description' => '',
+      ),
+      'display' => array(
+        'description' => '',
+        'label' => 'above',
+        'teaser' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'full' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '4' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '2' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '3' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'token' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+      ),
+    ),
+    'weight' => '18',
+    'fields' => array(
+      '0' => 'field_street',
+      '1' => 'field_zip',
+    ),
+  );
+
   // Exported group: group_atuacao
   $groups['nossasp_organization-group_atuacao'] = array(
     'group_type' => 'standard',
@@ -204,6 +251,7 @@ function nossasp_organization_fieldgroup_default_groups() {
   // Included for use with string extractors like potx.
   t('Conselho Municipal');
   t('Contato');
+  t('Endereço');
   t('Tipo de Organização');
   t('Área de Atuação');
 

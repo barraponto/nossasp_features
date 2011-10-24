@@ -20,6 +20,7 @@ function nossasp_organization_strongarm() {
     'taxonomy' => '-4',
     'path' => '4',
     'path_redirect' => '5',
+    'primary_term' => '0',
   );
   $export['content_extra_weights_nossasp_organization'] = $strongarm;
 
@@ -50,14 +51,14 @@ function nossasp_organization_strongarm() {
     ),
     'body_field' => array(
       'region' => 'main',
-      'weight' => '2',
+      'weight' => '3',
       'has_required' => FALSE,
       'title' => NULL,
       'hidden' => 0,
     ),
     'menu' => array(
       'region' => 'right',
-      'weight' => '5',
+      'weight' => '6',
       'has_required' => FALSE,
       'title' => 'Menu settings',
       'collapsed' => 1,
@@ -65,7 +66,7 @@ function nossasp_organization_strongarm() {
     ),
     'revision_information' => array(
       'region' => 'right',
-      'weight' => '7',
+      'weight' => '8',
       'has_required' => FALSE,
       'title' => 'Revision information',
       'collapsed' => 1,
@@ -73,7 +74,7 @@ function nossasp_organization_strongarm() {
     ),
     'path' => array(
       'region' => 'right',
-      'weight' => '8',
+      'weight' => '9',
       'has_required' => FALSE,
       'title' => 'URL path settings',
       'collapsed' => 1,
@@ -89,7 +90,7 @@ function nossasp_organization_strongarm() {
     ),
     'author' => array(
       'region' => 'right',
-      'weight' => '6',
+      'weight' => '7',
       'has_required' => FALSE,
       'title' => 'Authoring information',
       'collapsed' => 1,
@@ -111,14 +112,14 @@ function nossasp_organization_strongarm() {
     ),
     'taxonomy' => array(
       'region' => 'right',
-      'weight' => '4',
+      'weight' => '5',
       'has_required' => FALSE,
       'title' => NULL,
       'hidden' => 0,
     ),
     'group_atuacao' => array(
       'region' => 'right',
-      'weight' => '2',
+      'weight' => '3',
       'has_required' => FALSE,
       'title' => 'Área de Atuação',
       'hidden' => 0,
@@ -133,7 +134,7 @@ function nossasp_organization_strongarm() {
     ),
     'group_contact' => array(
       'region' => 'right',
-      'weight' => '3',
+      'weight' => '4',
       'has_required' => FALSE,
       'title' => 'Contato',
       'collapsed' => 1,
@@ -144,6 +145,21 @@ function nossasp_organization_strongarm() {
       'weight' => '0',
       'has_required' => FALSE,
       'title' => 'Conselho Municipal',
+      'hidden' => 0,
+      'collapsed' => 0,
+    ),
+    'primaryterm' => array(
+      'region' => 'right',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Primary Term',
+      'hidden' => 0,
+    ),
+    'group_address' => array(
+      'region' => 'main',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Endereço',
       'hidden' => 0,
     ),
   );

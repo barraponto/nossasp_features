@@ -71,6 +71,14 @@ function nossasp_organization_content_default_fields() {
         ),
       ),
       'default_value_php' => NULL,
+      'autocompletion_field_street_enable' => 1,
+      'autocompletion_field_street_override' => 1,
+      'autocompletion_field_street_content' => '[route], [street_number] [room] [floor] — [sublocality]',
+      'autocompletion_field_street_type' => 'input',
+      'autocompletion_field_zip_enable' => 1,
+      'autocompletion_field_zip_override' => 1,
+      'autocompletion_field_zip_content' => '[postal_code]',
+      'autocompletion_field_zip_type' => 'input',
       'label' => 'Endereço',
       'weight' => '-1',
       'description' => 'Entre o endereço da organização. Espere pelo recurso de autocompletar e escolha da lista.',
@@ -524,6 +532,68 @@ function nossasp_organization_content_default_fields() {
     ),
   );
 
+  // Exported field: field_street
+  $fields['nossasp_organization-field_street'] = array(
+    'field_name' => 'field_street',
+    'type_name' => 'nossasp_organization',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'rows' => 5,
+      'size' => '90',
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_street][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Rua',
+      'weight' => '19',
+      'description' => '',
+      'type' => 'text_textfield',
+      'module' => 'text',
+    ),
+  );
+
   // Exported field: field_tipo
   $fields['nossasp_organization-field_tipo'] = array(
     'field_name' => 'field_tipo',
@@ -729,14 +799,78 @@ function nossasp_organization_content_default_fields() {
     ),
   );
 
+  // Exported field: field_zip
+  $fields['nossasp_organization-field_zip'] = array(
+    'field_name' => 'field_zip',
+    'type_name' => 'nossasp_organization',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'rows' => 5,
+      'size' => '30',
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_zip][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'CEP',
+      'weight' => '20',
+      'description' => '',
+      'type' => 'text_textfield',
+      'module' => 'text',
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
+  t('CEP');
   t('Conselho');
   t('Conselho Municipal');
   t('Email');
   t('Endereço');
   t('Facebook');
   t('Fim da Gestão');
+  t('Rua');
   t('Site ou Blog');
   t('Telefone');
   t('Tipo de Organização');
