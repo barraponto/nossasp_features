@@ -34,3 +34,11 @@ function nossasp_contexts_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
     }
   }
 }
+
+function nossasp_contexts_init() {
+  if (drupal_is_front_page() && (isset($_GET['circle']) || isset($_GET['title']))) {
+    if ($plugin = context_get_plugin('condition', 'nossasp_contexts_search_results')) {
+      $plugin->execute();
+    }
+  }
+}

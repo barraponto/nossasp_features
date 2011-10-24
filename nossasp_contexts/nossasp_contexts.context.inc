@@ -19,18 +19,13 @@ function nossasp_contexts_context_default_contexts() {
         '~nossasp_search_results' => '~nossasp_search_results',
       ),
     ),
-    'sitewide' => array(
-      'values' => array(
-        1 => 1,
-      ),
-    ),
   );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-ac1d059bc0aeabb5015c2d28f61ba744' => array(
-          'module' => 'views',
-          'delta' => 'ac1d059bc0aeabb5015c2d28f61ba744',
+        'block-6' => array(
+          'module' => 'block',
+          'delta' => 6,
           'region' => 'sidebar_first',
           'weight' => 0,
         ),
@@ -52,50 +47,14 @@ function nossasp_contexts_context_default_contexts() {
   $context->description = 'Node resultado da busca no mapa';
   $context->tag = 'search';
   $context->conditions = array(
-    'node' => array(
-      'values' => array(
-        'nossasp_organization' => 'nossasp_organization',
-      ),
-      'options' => array(
-        'node_form' => '0',
-      ),
-    ),
     'nossasp_contexts_search_results' => array(
       'values' => array(
         1 => 1,
       ),
     ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views-ac1d059bc0aeabb5015c2d28f61ba744' => array(
-          'module' => 'views',
-          'delta' => 'ac1d059bc0aeabb5015c2d28f61ba744',
-          'region' => 'sidebar_first',
-          'weight' => 0,
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 1;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('Node resultado da busca no mapa');
-  t('search');
-  $export['nossasp_search_result_node'] = $context;
-
-  $context = new stdClass;
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
-  $context->name = 'nossasp_search_results';
-  $context->description = 'Resultados de busca do NossaSP';
-  $context->tag = 'search';
-  $context->conditions = array(
-    'views' => array(
+    'path' => array(
       'values' => array(
-        'nossasp_organizations_map' => 'nossasp_organizations_map',
+        '<front>' => '<front>',
       ),
     ),
   );
@@ -115,9 +74,9 @@ function nossasp_contexts_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Resultados de busca do NossaSP');
+  t('Node resultado da busca no mapa');
   t('search');
-  $export['nossasp_search_results'] = $context;
+  $export['nossasp_search_result_node'] = $context;
 
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
