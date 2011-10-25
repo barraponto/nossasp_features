@@ -1458,6 +1458,11 @@ function nossasp_organization_views_default_views() {
   $handler = $view->new_display('openlayers', 'OpenLayers Data', 'openlayers_1');
   $handler->override_option('row_plugin', '');
   $handler->override_option('displays', array());
+  $handler = $view->new_display('openlayers', 'OpenLayers Data', 'openlayers_2');
+  $handler->override_option('title', 'NossaSP All Results Layer');
+  $handler->override_option('items_per_page', 0);
+  $handler->override_option('row_plugin', '');
+  $handler->override_option('displays', array());
 
   $views[$view->name] = $view;
 
