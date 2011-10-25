@@ -129,7 +129,7 @@ function nossasp_organization_openlayers_presets() {
   $openlayers_presets->api_version = 1;
   $openlayers_presets->name = 'nossasp_search';
   $openlayers_presets->title = 'NossaSP Resultados da Busca';
-  $openlayers_presets->description = 'Mapa para exibição das organizações do NossaSP';
+  $openlayers_presets->description = 'Mapa para buscas no NossaSP';
   $openlayers_presets->data = array(
     'width' => '100%',
     'height' => '100%',
@@ -151,6 +151,7 @@ function nossasp_organization_openlayers_presets() {
       'openlayers_behavior_popup' => array(
         'layers' => array(
           'nossasp_organizations_search_openlayers_1' => 'nossasp_organizations_search_openlayers_1',
+          'nossasp_organizations_search_openlayers_2' => 0,
           'nossasp_districts' => 0,
         ),
       ),
