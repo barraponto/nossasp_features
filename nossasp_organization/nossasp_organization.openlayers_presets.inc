@@ -128,7 +128,7 @@ function nossasp_organization_openlayers_presets() {
   $openlayers_presets->disabled = FALSE; /* Edit this to true to make a default openlayers_presets disabled initially */
   $openlayers_presets->api_version = 1;
   $openlayers_presets->name = 'nossasp_search';
-  $openlayers_presets->title = 'NossaSP Busca';
+  $openlayers_presets->title = 'NossaSP Resultados da Busca';
   $openlayers_presets->description = 'Mapa para exibição das organizações do NossaSP';
   $openlayers_presets->data = array(
     'width' => '100%',
@@ -151,6 +151,7 @@ function nossasp_organization_openlayers_presets() {
       'openlayers_behavior_popup' => array(
         'layers' => array(
           'nossasp_organizations_search_openlayers_1' => 'nossasp_organizations_search_openlayers_1',
+          'nossasp_organizations_search_all_openlayers_1' => 0,
           'nossasp_districts' => 0,
         ),
       ),
@@ -168,8 +169,9 @@ function nossasp_organization_openlayers_presets() {
     'default_layer' => 'osm_mapnik',
     'layers' => array(
       'osm_mapnik' => 'osm_mapnik',
-      'nossasp_districts' => 'nossasp_districts',
       'nossasp_organizations_search_openlayers_1' => 'nossasp_organizations_search_openlayers_1',
+      'nossasp_organizations_search_all_openlayers_1' => 'nossasp_organizations_search_all_openlayers_1',
+      'nossasp_districts' => 'nossasp_districts',
     ),
     'layer_styles' => array(
       'nossasp_organizations_layer_openlayers_1' => array(
@@ -179,11 +181,17 @@ function nossasp_organization_openlayers_presets() {
       ),
       'nossasp_organizations_search_openlayers_1' => array(
         'default' => 'nossasp_organization_icons',
+        'select' => 'nossasp_organization_icons_hover',
+        'temporary' => 'nossasp_organization_icons',
+      ),
+      'nossasp_organizations_search_all_openlayers_1' => array(
+        'default' => 'default',
       ),
     ),
     'layer_activated' => array(
-      'nossasp_districts' => 'nossasp_districts',
       'nossasp_organizations_search_openlayers_1' => 'nossasp_organizations_search_openlayers_1',
+      'nossasp_organizations_search_all_openlayers_1' => 'nossasp_organizations_search_all_openlayers_1',
+      'nossasp_districts' => 'nossasp_districts',
     ),
     'layer_switcher' => array(),
     'projection' => '900913',

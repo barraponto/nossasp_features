@@ -728,6 +728,67 @@ function nossasp_organization_content_default_fields() {
     ),
   );
 
+  // Exported field: field_council_ref
+  $fields['nossasp_councilman-field_council_ref'] = array(
+    'field_name' => 'field_council_ref',
+    'type_name' => 'nossasp_councilman',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'nodereferrer',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'nodereferrer',
+    'active' => '1',
+    'referrer_types' => array(
+      'nossasp_council' => 'nossasp_council',
+      'nossasp_councilman' => 0,
+      'nossasp_mantainer' => 0,
+      'nossasp_organization' => 0,
+    ),
+    'referrer_fields' => array(
+      'field_councilman_ref' => 'field_councilman_ref',
+    ),
+    'referrer_nodes_per_page' => '0',
+    'referrer_pager_element' => '0',
+    'referrer_order' => 'TITLE_ASC',
+    'widget' => array(
+      'label' => 'Conselho',
+      'weight' => '-1',
+      'description' => '',
+      'type' => 'nodereferrer_list',
+      'module' => 'nodereferrer',
+    ),
+  );
+
   // Exported field: field_councilman_email
   $fields['nossasp_councilman-field_councilman_email'] = array(
     'field_name' => 'field_councilman_email',
@@ -1569,6 +1630,7 @@ function nossasp_organization_content_default_fields() {
   t('CEP');
   t('Cargo');
   t('Conselheiros');
+  t('Conselho');
   t('Email');
   t('Email do Conselheiro');
   t('Endereço');

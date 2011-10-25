@@ -30,13 +30,13 @@ function nossasp_organization_strongarm() {
   $strongarm->name = 'content_extra_weights_nossasp_councilman';
   $strongarm->value = array(
     'title' => '-5',
-    'revision_information' => '2',
-    'author' => '1',
-    'options' => '3',
-    'menu' => '-1',
-    'path' => '4',
-    'path_redirect' => '5',
-    'primary_term' => '0',
+    'revision_information' => '3',
+    'author' => '2',
+    'options' => '4',
+    'menu' => '0',
+    'path' => '5',
+    'path_redirect' => '6',
+    'primary_term' => '1',
   );
   $export['content_extra_weights_nossasp_councilman'] = $strongarm;
 
