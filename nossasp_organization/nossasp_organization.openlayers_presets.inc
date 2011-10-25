@@ -36,9 +36,9 @@ function nossasp_organization_openlayers_presets() {
       ),
       'openlayers_behavior_panzoom' => array(),
     ),
-    'default_layer' => 'osm_mapnik',
+    'default_layer' => 'google_normal',
     'layers' => array(
-      'osm_mapnik' => 'osm_mapnik',
+      'google_normal' => 'google_normal',
     ),
     'layer_styles' => array(
       'nossasp_organizations_layer_openlayers_1' => array(
@@ -98,9 +98,9 @@ function nossasp_organization_openlayers_presets() {
         'point_zoom_level' => '13',
       ),
     ),
-    'default_layer' => 'osm_mapnik',
+    'default_layer' => 'google_normal',
     'layers' => array(
-      'osm_mapnik' => 'osm_mapnik',
+      'google_normal' => 'google_normal',
       'nossasp_organizations_layer_openlayers_1' => 'nossasp_organizations_layer_openlayers_1',
     ),
     'layer_styles' => array(
@@ -166,9 +166,9 @@ function nossasp_organization_openlayers_presets() {
         'point_zoom_level' => '15',
       ),
     ),
-    'default_layer' => 'osm_mapnik',
+    'default_layer' => 'google_normal',
     'layers' => array(
-      'osm_mapnik' => 'osm_mapnik',
+      'google_normal' => 'google_normal',
       'nossasp_organizations_search_openlayers_1' => 'nossasp_organizations_search_openlayers_1',
       'nossasp_organizations_search_all_openlayers_1' => 'nossasp_organizations_search_all_openlayers_1',
       'nossasp_districts' => 'nossasp_districts',
