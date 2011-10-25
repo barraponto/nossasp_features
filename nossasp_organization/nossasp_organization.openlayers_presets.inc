@@ -127,6 +127,83 @@ function nossasp_organization_openlayers_presets() {
   $openlayers_presets = new stdClass;
   $openlayers_presets->disabled = FALSE; /* Edit this to true to make a default openlayers_presets disabled initially */
   $openlayers_presets->api_version = 1;
+  $openlayers_presets->name = 'nossasp_all';
+  $openlayers_presets->title = 'NossaSP Todas';
+  $openlayers_presets->description = 'Mapa para exibição de todas as organizações do NossaSP';
+  $openlayers_presets->data = array(
+    'width' => '100%',
+    'height' => '100%',
+    'image_path' => '',
+    'css_path' => '',
+    'proxy_host' => '',
+    'hide_empty_map' => 0,
+    'center' => array(
+      'initial' => array(
+        'centerpoint' => '-46.634469861376, -23.550680663281',
+        'zoom' => '13',
+      ),
+      'restrict' => array(
+        'restrictextent' => 0,
+        'restrictedExtent' => '-5229543.951796,-2732995.183112,-5149437.946167,-2680406.507661',
+      ),
+    ),
+    'behaviors' => array(
+      'openlayers_behavior_popup' => array(
+        'layers' => array(
+          'nossasp_organizations_all_openlayers_1' => 'nossasp_organizations_all_openlayers_1',
+          'nossasp_districts' => 0,
+        ),
+      ),
+      'openlayers_behavior_fullscreen' => array(
+        'activated' => 0,
+      ),
+      'openlayers_behavior_navigation' => array(
+        'zoomWheelEnabled' => 1,
+      ),
+      'openlayers_behavior_zoomtolayer' => array(
+        'zoomtolayer' => 'google_normal',
+        'point_zoom_level' => '15',
+      ),
+    ),
+    'default_layer' => 'google_normal',
+    'layers' => array(
+      'google_normal' => 'google_normal',
+      'nossasp_organizations_all_openlayers_1' => 'nossasp_organizations_all_openlayers_1',
+      'nossasp_districts' => 'nossasp_districts',
+    ),
+    'layer_styles' => array(
+      'nossasp_organizations_search_openlayers_1' => array(
+        'default' => 'nossasp_organization_icons',
+        'select' => 'nossasp_organization_big_icons',
+      ),
+      'nossasp_organizations_layer_openlayers_1' => array(
+        'default' => 'default',
+        'select' => 'default',
+        'temporary' => 'default',
+      ),
+      'nossasp_organizations_all_openlayers_1' => array(
+        'default' => 'nossasp_organization_icons',
+        'select' => 'nossasp_organization_big_icons',
+      ),
+    ),
+    'layer_activated' => array(
+      'nossasp_organizations_all_openlayers_1' => 'nossasp_organizations_all_openlayers_1',
+      'nossasp_districts' => 'nossasp_districts',
+    ),
+    'layer_switcher' => array(),
+    'projection' => '900913',
+    'displayProjection' => '4326',
+    'styles' => array(
+      'default' => 'default',
+      'select' => 'default',
+      'temporary' => 'default',
+    ),
+  );
+  $export['nossasp_all'] = $openlayers_presets;
+
+  $openlayers_presets = new stdClass;
+  $openlayers_presets->disabled = FALSE; /* Edit this to true to make a default openlayers_presets disabled initially */
+  $openlayers_presets->api_version = 1;
   $openlayers_presets->name = 'nossasp_search';
   $openlayers_presets->title = 'NossaSP Resultados da Busca';
   $openlayers_presets->description = 'Mapa para buscas no NossaSP';
