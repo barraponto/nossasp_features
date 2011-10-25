@@ -151,7 +151,6 @@ function nossasp_organization_openlayers_presets() {
       'openlayers_behavior_popup' => array(
         'layers' => array(
           'nossasp_organizations_search_openlayers_1' => 'nossasp_organizations_search_openlayers_1',
-          'nossasp_organizations_search_all_openlayers_1' => 0,
           'nossasp_districts' => 0,
         ),
       ),
@@ -169,8 +168,8 @@ function nossasp_organization_openlayers_presets() {
     'default_layer' => 'google_normal',
     'layers' => array(
       'google_normal' => 'google_normal',
+      'nossasp_organizations_search_openlayers_2' => 'nossasp_organizations_search_openlayers_2',
       'nossasp_organizations_search_openlayers_1' => 'nossasp_organizations_search_openlayers_1',
-      'nossasp_organizations_search_all_openlayers_1' => 'nossasp_organizations_search_all_openlayers_1',
       'nossasp_districts' => 'nossasp_districts',
     ),
     'layer_styles' => array(
@@ -181,16 +180,12 @@ function nossasp_organization_openlayers_presets() {
       ),
       'nossasp_organizations_search_openlayers_1' => array(
         'default' => 'nossasp_organization_icons',
-        'select' => 'nossasp_organization_icons_hover',
-        'temporary' => 'nossasp_organization_icons',
-      ),
-      'nossasp_organizations_search_all_openlayers_1' => array(
-        'default' => 'default',
+        'select' => 'nossasp_organization_big_icons',
       ),
     ),
     'layer_activated' => array(
+      'nossasp_organizations_search_openlayers_2' => 'nossasp_organizations_search_openlayers_2',
       'nossasp_organizations_search_openlayers_1' => 'nossasp_organizations_search_openlayers_1',
-      'nossasp_organizations_search_all_openlayers_1' => 'nossasp_organizations_search_all_openlayers_1',
       'nossasp_districts' => 'nossasp_districts',
     ),
     'layer_switcher' => array(),
