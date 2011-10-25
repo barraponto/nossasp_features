@@ -89,6 +89,7 @@ features[variable][] = "nodeformscols_field_placements_nossasp_organization_defa
 features[views][] = "nossasp_organization_export"
 features[views][] = "nossasp_organization_manage_orgs"
 features[views][] = "nossasp_organization_update_orgs"
+features[views][] = "nossasp_organizations_all"
 features[views][] = "nossasp_organizations_layer"
 features[views][] = "nossasp_organizations_map"
 features[views][] = "nossasp_organizations_search"
