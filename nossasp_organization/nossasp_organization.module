@@ -7,15 +7,18 @@ function nossasp_organization_views_pre_view(&$view) {
     $empty_text = 'Você ainda não cadastrou nenhuma organização.'. ' ' . l('Que tal começar agora?','node/add/nossasp-organization');
     $view->display_handler->set_option('empty', $empty_text);
   }
-  elseif ($view->name == 'nossasp_organizations_search_box') {
-    $header_text = '<p class="counter"><span class="number">' . count($view->result)  . '</span> resultados</p>';
-    $header_text .= '<p class="download">' . l('Baixe o banco de dados do mapa', 'organizations/data') . '</p>';
-    $view->display_handler->set_option('header', $header_text);
-  }
   elseif ($view->name == 'nossasp_organizations_map') { 
     if (drupal_is_front_page() &! (isset($_GET['circle']) || isset($_GET['title']))) {
       $view->display_handler->set_option('style_options', array('preset' => 'nossasp_all'));
     }
+  }
+}
+
+function nossasp_organization_views_pre_render(&$view) {
+  if ($view->name == 'nossasp_organizations_search_box') {
+    $header_text = '<p class="counter"><span class="number">' . count($view->result)  . '</span> resultados</p>';
+    $header_text .= '<p class="download">' . l('Baixe o banco de dados do mapa', 'organizations/data') . '</p>';
+    $view->display_handler->set_option('header', $header_text);
   }
 }
 
