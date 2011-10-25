@@ -11,7 +11,8 @@ function nossasp_mantainer_user_default_permissions() {
     'name' => 'create nossasp_mantainer content',
     'roles' => array(
       '0' => 'administrator',
-      '1' => 'authenticated user',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
     ),
   );
 
@@ -46,6 +47,7 @@ function nossasp_mantainer_user_default_permissions() {
     'roles' => array(
       '0' => 'administrator',
       '1' => 'authenticated user',
+      '2' => 'manager',
     ),
   );
 

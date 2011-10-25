@@ -20,7 +20,7 @@ function nossasp_mantainer_node_info() {
       'module' => 'features',
       'description' => t('Perfil dos mantenedores, responsáveis por informar e atualizar os dados das organizações que representam.'),
       'has_title' => '1',
-      'title_label' => t('Nome'),
+      'title_label' => t('Nome Completo'),
       'has_body' => '0',
       'body_label' => '',
       'min_word_count' => '0',
