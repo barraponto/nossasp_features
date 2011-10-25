@@ -12,15 +12,15 @@ function nossasp_organization_strongarm() {
   $strongarm->name = 'content_extra_weights_nossasp_council';
   $strongarm->value = array(
     'title' => '-5',
-    'body_field' => '-3',
-    'revision_information' => '0',
-    'author' => '-1',
-    'options' => '1',
+    'body_field' => '-2',
+    'revision_information' => '1',
+    'author' => '0',
+    'options' => '2',
     'menu' => '-4',
     'taxonomy' => '-3',
-    'path' => '3',
-    'path_redirect' => '2',
-    'primary_term' => '-2',
+    'path' => '4',
+    'path_redirect' => '3',
+    'primary_term' => '-1',
   );
   $export['content_extra_weights_nossasp_council'] = $strongarm;
 
