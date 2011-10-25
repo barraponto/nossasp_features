@@ -9,7 +9,7 @@ function nossasp_organization_views_pre_render(&$view) {
   }
   elseif ($view->name == 'nossasp_organizations_search_box') {
     $header_text = '<p class="counter"><span class="number">' . count($view->result)  . '</span> resultados</p>';
-    $header_text .= '<p class="download">' . l('Baixe o banco de dados do mapa', 'http://www.google.com') . '</p>';
+    $header_text .= '<p class="download">' . l('Baixe o banco de dados do mapa', 'organizations/data') . '</p>';
     $view->display_handler->set_option('header', $header_text);
   }
 }
