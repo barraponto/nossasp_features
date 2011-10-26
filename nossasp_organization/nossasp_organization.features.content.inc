@@ -135,7 +135,7 @@ function nossasp_organization_content_default_fields() {
     'depth' => '',
     'widget' => array(
       'group_parent' => '0',
-      'show_depth' => 0,
+      'show_depth' => 1,
       'default_value' => array(
         '0' => array(
           'value' => NULL,
