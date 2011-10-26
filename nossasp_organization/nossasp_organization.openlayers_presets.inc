@@ -105,8 +105,8 @@ function nossasp_organization_openlayers_presets() {
     ),
     'layer_styles' => array(
       'nossasp_organizations_layer_openlayers_1' => array(
-        'default' => 'default',
-        'select' => 'default',
+        'default' => 'nossasp_organization_icons',
+        'select' => 'nossasp_organization_big_icons',
         'temporary' => 'default',
       ),
     ),
