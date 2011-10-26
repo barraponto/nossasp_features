@@ -24,7 +24,7 @@ fields = [
         {'type': 'Educação', 'tid': '7', 'icon': 'university', 'generate': 'health-education/education/university'},
         {'type': 'Esporte', 'tid': '8', 'icon': 'soccerfield', 'generate': 'sports/ball-sports/soccer-football'},
         {'type': 'Habitação', 'tid': '9', 'icon': 'apartment-3', 'generate': 'friends-family/apartment'},
-        {'type': 'Meio Ambiente', 'tid': '10', 'icon': 'riparianhabitat', 'generate': 'nature/natural-marvels/riparian-habitat'},
+        {'type': 'Meio Ambiente', 'tid': '10', 'icon': 'urbanpark', 'generate': 'tourism/park'},
         {'type': 'Redes', 'tid': '11', 'icon': 'share', 'generate': 'media/share'},
         {'type': 'Saúde', 'tid': '12', 'icon': 'firstaid', 'generate': 'health/education/first-aid'},
         {'type': 'Segurança', 'tid': '13', 'icon': 'police', 'generate': 'offices/police'},
