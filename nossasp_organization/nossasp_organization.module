@@ -33,6 +33,7 @@ function nossasp_organization_form_alter(&$form, &$form_state, $form_id) {
     $form['title']['#size'] = $form['circle']['location']['#size'] = 72;
     $form['tid']['#type'] = 'checkboxes';
     $form['#after_build'][] = 'nossasp_organization_exposed_search';
+    $form['tid_1']['#attributes'] = array('class' => 'jquery_dropdown');
   }
   if ($form_id == 'nossasp_organization_node_form') {
     $form['field_tipo']['#title'] = $form['field_atuacao']['#title'] = FALSE;
@@ -49,6 +50,9 @@ function nossasp_organization_exposed_search($form, &$form_state) {
   unset($form['circle']['location']['#field_prefix']);
   $form['circle']['min']['#access'] = $form['circle']['max']['#access'] = FALSE;
   $form['submit']['#weight'] = 0;
+
+  // Workaroud for the ugly <All> option
+  $form['tid_1']['#options']['All'] = 'Tipo de Organização';
 
   return $form;
 }
