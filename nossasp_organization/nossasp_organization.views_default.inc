@@ -1219,6 +1219,25 @@ function nossasp_organization_views_default_views() {
     ),
   ));
   $handler->override_option('filters', array(
+    'title' => array(
+      'operator' => 'contains',
+      'value' => '',
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'title_op',
+        'identifier' => 'title',
+        'label' => 'Pesquisar por Nome',
+        'optional' => 1,
+        'remember' => 0,
+      ),
+      'case' => 0,
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'relationship' => 'none',
+    ),
     'circle' => array(
       'operator' => '<',
       'value' => array(
@@ -1241,7 +1260,7 @@ function nossasp_organization_views_default_views() {
         'use_operator' => 0,
         'operator' => 'circle_op',
         'identifier' => 'circle',
-        'label' => 'Busca por endereço',
+        'label' => 'Pesquisar por Endereço',
         'optional' => 1,
         'single' => 1,
         'remember' => 0,
@@ -1250,25 +1269,6 @@ function nossasp_organization_views_default_views() {
       'id' => 'circle',
       'table' => 'openlayers_proximity',
       'field' => 'circle',
-      'relationship' => 'none',
-    ),
-    'title' => array(
-      'operator' => 'contains',
-      'value' => '',
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'title_op',
-        'identifier' => 'title',
-        'label' => 'Busca por nome',
-        'optional' => 1,
-        'remember' => 0,
-      ),
-      'case' => 0,
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
       'relationship' => 'none',
     ),
     'tid_1' => array(
