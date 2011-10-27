@@ -46,7 +46,7 @@ function nossasp_organization_form_alter(&$form, &$form_state, $form_id) {
       drupal_add_js(drupal_get_path('module', 'nossasp_organization') . '/nossasp-organization-node-form.js');
     }
   }
-  elseif ($form_id == 'contact_mail_page') { 
+  elseif (in_array($form_id, array('contact_mail_page', 'user_register', 'user_login', 'user_pass'))) { 
     $form['title'] = array(
       '#value' => '<h1 class="form-title">' . drupal_get_title() . '</h1>',
       '#weight' => -42,
