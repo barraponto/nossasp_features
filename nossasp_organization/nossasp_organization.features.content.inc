@@ -11,7 +11,7 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_address',
     'type_name' => 'nossasp_council',
     'display_settings' => array(
-      'weight' => '-2',
+      'weight' => '7',
       'parent' => '',
       'label' => array(
         'format' => 'hidden',
@@ -22,7 +22,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'full' => array(
         'format' => 'openlayers_map_nossasp',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '2' => array(
         'format' => 'hidden',
@@ -92,10 +92,10 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_atuacao',
     'type_name' => 'nossasp_council',
     'display_settings' => array(
-      'weight' => '10',
-      'parent' => 'group_atuacao',
+      'weight' => '7',
+      'parent' => 'group_council_atuacao',
       'label' => array(
-        'format' => 'above',
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
@@ -103,7 +103,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'full' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -155,17 +155,18 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_councilman_ref',
     'type_name' => 'nossasp_council',
     'display_settings' => array(
+      'weight' => '11',
+      'parent' => '',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
+        'format' => 'hidden',
+        'exclude' => 1,
       ),
       'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
+        'format' => 'hidden',
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -220,8 +221,8 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_email',
     'type_name' => 'nossasp_council',
     'display_settings' => array(
-      'weight' => '7',
-      'parent' => 'group_contact',
+      'weight' => '12',
+      'parent' => 'group_council_contato',
       'label' => array(
         'format' => 'inline',
       ),
@@ -231,7 +232,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'full' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -277,8 +278,8 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_facebook',
     'type_name' => 'nossasp_council',
     'display_settings' => array(
-      'weight' => '9',
-      'parent' => 'group_contact',
+      'weight' => '14',
+      'parent' => 'group_council_contato',
       'label' => array(
         'format' => 'inline',
       ),
@@ -288,7 +289,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'full' => array(
         'format' => 'url',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -314,13 +315,13 @@ function nossasp_organization_content_default_fields() {
     'module' => 'link',
     'active' => '1',
     'attributes' => array(
-      'target' => 'default',
+      'target' => '_blank',
       'rel' => '',
       'class' => '',
       'title' => '',
     ),
     'display' => array(
-      'url_cutoff' => '80',
+      'url_cutoff' => '42',
     ),
     'url' => 0,
     'title' => 'none',
@@ -347,8 +348,8 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_phone',
     'type_name' => 'nossasp_council',
     'display_settings' => array(
-      'weight' => '6',
-      'parent' => 'group_contact',
+      'weight' => '11',
+      'parent' => 'group_council_contato',
       'label' => array(
         'format' => 'inline',
       ),
@@ -358,7 +359,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'full' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -406,9 +407,10 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_street',
     'type_name' => 'nossasp_council',
     'display_settings' => array(
+      'weight' => '13',
+      'parent' => 'group_council_address',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
@@ -416,7 +418,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'full' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -468,14 +470,14 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_tipo',
     'type_name' => 'nossasp_council',
     'display_settings' => array(
-      'weight' => '11',
-      'parent' => 'group_tipo',
+      'weight' => '6',
+      'parent' => 'group_council_type',
       'label' => array(
         'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'hidden',
-        'exclude' => 1,
+        'exclude' => 0,
       ),
       'full' => array(
         'format' => 'hidden',
@@ -531,8 +533,8 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_twitter',
     'type_name' => 'nossasp_council',
     'display_settings' => array(
-      'weight' => '8',
-      'parent' => 'group_contact',
+      'weight' => '13',
+      'parent' => 'group_council_contato',
       'label' => array(
         'format' => 'inline',
       ),
@@ -542,7 +544,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'full' => array(
         'format' => 'url',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -568,13 +570,13 @@ function nossasp_organization_content_default_fields() {
     'module' => 'link',
     'active' => '1',
     'attributes' => array(
-      'target' => 'default',
+      'target' => '_blank',
       'rel' => '',
       'class' => '',
       'title' => '',
     ),
     'display' => array(
-      'url_cutoff' => '80',
+      'url_cutoff' => '42',
     ),
     'url' => 0,
     'title' => 'none',
@@ -601,8 +603,8 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_website',
     'type_name' => 'nossasp_council',
     'display_settings' => array(
-      'weight' => '10',
-      'parent' => 'group_contact',
+      'weight' => '15',
+      'parent' => 'group_council_contato',
       'label' => array(
         'format' => 'inline',
       ),
@@ -612,7 +614,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'full' => array(
         'format' => 'url',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -638,13 +640,13 @@ function nossasp_organization_content_default_fields() {
     'module' => 'link',
     'active' => '1',
     'attributes' => array(
-      'target' => 'default',
+      'target' => '_blank',
       'rel' => '',
       'class' => '',
       'title' => '',
     ),
     'display' => array(
-      'url_cutoff' => '80',
+      'url_cutoff' => '42',
     ),
     'url' => 0,
     'title' => 'none',
@@ -671,9 +673,10 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_zip',
     'type_name' => 'nossasp_council',
     'display_settings' => array(
+      'weight' => '14',
+      'parent' => 'group_council_address',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'inline',
       ),
       'teaser' => array(
         'format' => 'default',
@@ -681,7 +684,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'full' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -1054,11 +1057,11 @@ function nossasp_organization_content_default_fields() {
       'weight' => '10',
       'parent' => 'group_atuacao',
       'label' => array(
-        'format' => 'above',
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       'full' => array(
         'format' => 'default',
@@ -1208,13 +1211,13 @@ function nossasp_organization_content_default_fields() {
     'module' => 'link',
     'active' => '1',
     'attributes' => array(
-      'target' => 'default',
+      'target' => '_blank',
       'rel' => '',
       'class' => '',
       'title' => '',
     ),
     'display' => array(
-      'url_cutoff' => '80',
+      'url_cutoff' => '42',
     ),
     'url' => 0,
     'title' => 'none',
@@ -1224,7 +1227,6 @@ function nossasp_organization_content_default_fields() {
     'widget' => array(
       'default_value' => array(
         '0' => array(
-          'title' => '',
           'url' => '',
         ),
       ),
@@ -1245,10 +1247,10 @@ function nossasp_organization_content_default_fields() {
       'weight' => '7',
       'parent' => 'group_contact',
       'label' => array(
-        'format' => 'above',
+        'format' => 'inline',
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 1,
       ),
       'full' => array(
@@ -1309,7 +1311,7 @@ Exemplo: (12) 3456-7890 / (98) 7654-3210',
       'weight' => '19',
       'parent' => 'group_address',
       'label' => array(
-        'format' => 'above',
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
@@ -1376,7 +1378,7 @@ Exemplo: (12) 3456-7890 / (98) 7654-3210',
       ),
       'teaser' => array(
         'format' => 'hidden',
-        'exclude' => 1,
+        'exclude' => 0,
       ),
       'full' => array(
         'format' => 'hidden',
@@ -1469,13 +1471,13 @@ Exemplo: (12) 3456-7890 / (98) 7654-3210',
     'module' => 'link',
     'active' => '1',
     'attributes' => array(
-      'target' => 'default',
+      'target' => '_blank',
       'rel' => '',
       'class' => '',
       'title' => '',
     ),
     'display' => array(
-      'url_cutoff' => '80',
+      'url_cutoff' => '42',
     ),
     'url' => 0,
     'title' => 'none',
@@ -1485,7 +1487,6 @@ Exemplo: (12) 3456-7890 / (98) 7654-3210',
     'widget' => array(
       'default_value' => array(
         '0' => array(
-          'title' => '',
           'url' => '',
         ),
       ),
@@ -1540,13 +1541,13 @@ Exemplo: (12) 3456-7890 / (98) 7654-3210',
     'module' => 'link',
     'active' => '1',
     'attributes' => array(
-      'target' => 'default',
+      'target' => '_blank',
       'rel' => '',
       'class' => '',
       'title' => '',
     ),
     'display' => array(
-      'url_cutoff' => '80',
+      'url_cutoff' => '42',
     ),
     'url' => 0,
     'title' => 'none',
@@ -1556,7 +1557,6 @@ Exemplo: (12) 3456-7890 / (98) 7654-3210',
     'widget' => array(
       'default_value' => array(
         '0' => array(
-          'title' => '',
           'url' => '',
         ),
       ),
@@ -1577,7 +1577,7 @@ Exemplo: (12) 3456-7890 / (98) 7654-3210',
       'weight' => '20',
       'parent' => 'group_address',
       'label' => array(
-        'format' => 'above',
+        'format' => 'inline',
       ),
       'teaser' => array(
         'format' => 'default',

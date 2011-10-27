@@ -18,15 +18,17 @@ function nossasp_organization_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'description' => '',
+        'weight' => '10',
+        'label' => 'above',
         'teaser' => array(
           'format' => 'fieldset',
           'exclude' => 0,
         ),
         'full' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
+          'format' => 'no_style',
+          'exclude' => 1,
         ),
+        'description' => '',
         '4' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -43,7 +45,6 @@ function nossasp_organization_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
-        'label' => 'above',
       ),
     ),
     'weight' => '10',
@@ -65,15 +66,17 @@ function nossasp_organization_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'description' => '',
+        'weight' => '8',
+        'label' => 'hidden',
         'teaser' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
+          'format' => 'no_style',
+          'exclude' => 1,
         ),
         'full' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
+          'format' => 'no_style',
+          'exclude' => 1,
         ),
+        'description' => '',
         '4' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -90,7 +93,6 @@ function nossasp_organization_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
-        'label' => 'above',
       ),
     ),
     'weight' => '8',
@@ -111,15 +113,17 @@ function nossasp_organization_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'description' => '',
+        'weight' => '9',
+        'label' => 'hidden',
         'teaser' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
+          'format' => 'hidden',
+          'exclude' => 1,
         ),
         'full' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
+          'format' => 'no_style',
+          'exclude' => 1,
         ),
+        'description' => '',
         '4' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -136,7 +140,6 @@ function nossasp_organization_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
-        'label' => 'above',
       ),
     ),
     'weight' => '9',
@@ -161,15 +164,17 @@ function nossasp_organization_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'description' => '',
+        'weight' => '5',
+        'label' => 'hidden',
         'teaser' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
+          'format' => 'hidden',
+          'exclude' => 1,
         ),
         'full' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
+          'format' => 'hidden',
+          'exclude' => 1,
         ),
+        'description' => '',
         '4' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -186,7 +191,6 @@ function nossasp_organization_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
-        'label' => 'above',
       ),
     ),
     'weight' => '5',
@@ -208,13 +212,13 @@ function nossasp_organization_fieldgroup_default_groups() {
       ),
       'display' => array(
         'weight' => '18',
-        'label' => 'above',
+        'label' => 'hidden',
         'teaser' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
+          'format' => 'hidden',
+          'exclude' => 1,
         ),
         'full' => array(
-          'format' => 'fieldset',
+          'format' => 'no_style',
           'exclude' => 1,
         ),
         'description' => '',
@@ -303,13 +307,13 @@ function nossasp_organization_fieldgroup_default_groups() {
       ),
       'display' => array(
         'weight' => '7',
-        'label' => 'above',
+        'label' => 'hidden',
         'teaser' => array(
-          'format' => 'fieldset',
+          'format' => 'hidden',
           'exclude' => 1,
         ),
         'full' => array(
-          'format' => 'fieldset',
+          'format' => 'no_style',
           'exclude' => 1,
         ),
         'description' => '',
