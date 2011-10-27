@@ -1729,6 +1729,7 @@ function nossasp_organization_views_default_views() {
   $handler->override_option('title', 'NossaSP Search Layer');
   $handler->override_option('use_ajax', TRUE);
   $handler->override_option('items_per_page', 5);
+  $handler->override_option('use_pager', 'mini');
   $handler->override_option('distinct', 1);
   $handler->override_option('style_plugin', 'openlayers_data');
   $handler->override_option('style_options', array(
@@ -1755,6 +1756,7 @@ function nossasp_organization_views_default_views() {
   $handler = $view->new_display('openlayers', 'OpenLayers Data', 'openlayers_2');
   $handler->override_option('title', 'NossaSP All Results Layer');
   $handler->override_option('items_per_page', 0);
+  $handler->override_option('use_pager', FALSE);
   $handler->override_option('row_plugin', '');
   $handler->override_option('displays', array());
 
@@ -2026,10 +2028,17 @@ function nossasp_organization_views_default_views() {
   ));
   $handler->override_option('header', '.');
   $handler->override_option('header_format', '2');
-  $handler->override_option('header_empty', 0);
+  $handler->override_option('header_empty', 1);
+  $handler->override_option('empty', 'Não foi encontrada nenhuma organização a partir da sua busca.');
+  $handler->override_option('empty_format', '1');
   $handler->override_option('use_ajax', TRUE);
   $handler->override_option('items_per_page', 5);
-  $handler->override_option('use_pager', '1');
+  $handler->override_option('use_pager', 'mini');
+  $handler->override_option('row_options', array(
+    'inline' => array(),
+    'separator' => '',
+    'hide_empty' => 1,
+  ));
   $handler->override_option('exposed_block', TRUE);
   $handler = $view->new_display('block', 'Block', 'block_1');
   $handler->override_option('block_description', '');
