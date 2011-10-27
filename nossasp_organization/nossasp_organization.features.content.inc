@@ -266,7 +266,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Email',
-      'weight' => '12',
+      'weight' => '13',
       'description' => '',
       'type' => 'email_textfield',
       'module' => 'email',
@@ -336,20 +336,20 @@ function nossasp_organization_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Facebook',
-      'weight' => '14',
+      'weight' => '15',
       'description' => '',
       'type' => 'link',
       'module' => 'link',
     ),
   );
 
-  // Exported field: field_phone
-  $fields['nossasp_council-field_phone'] = array(
-    'field_name' => 'field_phone',
+  // Exported field: field_phone_text
+  $fields['nossasp_council-field_phone_text'] = array(
+    'field_name' => 'field_phone_text',
     'type_name' => 'nossasp_council',
     'display_settings' => array(
-      'weight' => '11',
-      'parent' => 'group_council_contato',
+      'weight' => '7',
+      'parent' => 'group_contact',
       'label' => array(
         'format' => 'inline',
       ),
@@ -379,26 +379,31 @@ function nossasp_organization_content_default_fields() {
       ),
     ),
     'widget_active' => '1',
-    'type' => 'br_phone',
+    'type' => 'text',
     'required' => '0',
     'multiple' => '0',
-    'module' => 'phone',
+    'module' => 'text',
     'active' => '1',
-    'phone_country_code' => 0,
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
     'widget' => array(
+      'rows' => 5,
       'size' => '45',
       'default_value' => array(
         '0' => array(
           'value' => '',
-          '_error_element' => 'default_value_widget][field_phone][0][value',
+          '_error_element' => 'default_value_widget][field_phone_text][0][value',
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Telefone',
-      'weight' => '11',
-      'description' => '',
-      'type' => 'phone_textfield',
-      'module' => 'phone',
+      'label' => 'Telefone(s)',
+      'weight' => '12',
+      'description' => 'Para adicionar mais de um telefone, use / para separá-los.
+Exemplo: (12) 3456-7890 / (98) 7654-3210',
+      'type' => 'text_textfield',
+      'module' => 'text',
     ),
   );
 
@@ -591,7 +596,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Twitter',
-      'weight' => '13',
+      'weight' => '14',
       'description' => '',
       'type' => 'link',
       'module' => 'link',
@@ -661,7 +666,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Site ou Blog',
-      'weight' => '15',
+      'weight' => '16',
       'description' => '',
       'type' => 'link',
       'module' => 'link',
@@ -1644,7 +1649,6 @@ Exemplo: (12) 3456-7890 / (98) 7654-3210',
   t('Facebook');
   t('Rua');
   t('Site ou Blog');
-  t('Telefone');
   t('Telefone do Conselheiro');
   t('Telefone(s)');
   t('Tipo de Organização');

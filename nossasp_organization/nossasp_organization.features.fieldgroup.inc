@@ -144,7 +144,7 @@ function nossasp_organization_fieldgroup_default_groups() {
     ),
     'weight' => '9',
     'fields' => array(
-      '0' => 'field_phone',
+      '0' => 'field_phone_text',
       '1' => 'field_email',
       '2' => 'field_twitter',
       '3' => 'field_facebook',
