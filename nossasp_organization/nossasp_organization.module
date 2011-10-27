@@ -40,11 +40,17 @@ function nossasp_organization_form_alter(&$form, &$form_state, $form_id) {
     $form['#after_build'][] = 'nossasp_organization_exposed_search';
     $form['tid_1']['#attributes'] = array('class' => 'jquery_dropdown');
   }
-  if ($form_id == 'nossasp_organization_node_form') {
+  elseif ($form_id == 'nossasp_organization_node_form') {
     $form['field_tipo']['#title'] = $form['field_atuacao']['#title'] = FALSE;
     if (user_access('create municipal councils')) {
       drupal_add_js(drupal_get_path('module', 'nossasp_organization') . '/nossasp-organization-node-form.js');
     }
+  }
+  elseif ($form_id == 'contact_mail_page') { 
+    $form['title'] = array(
+      '#value' => '<h1 class="form-title">' . drupal_get_title() . '</h1>',
+      '#weight' => -42,
+    );
   }
 }
 
