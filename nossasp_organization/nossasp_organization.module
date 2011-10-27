@@ -60,7 +60,7 @@ function nossasp_organization_exposed_search($form, &$form_state) {
   $form['tid_1']['#options']['All'] = 'Tipo de Organização';
 
   // turn apply into OK
-  $form['submit']['#value'] = 'OK';
+  $form['submit']['#value'] = 'Buscar';
 
   return $form;
 }
