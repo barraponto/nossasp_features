@@ -207,7 +207,7 @@ function nossasp_organization_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'description' => '',
+        'weight' => '18',
         'label' => 'above',
         'teaser' => array(
           'format' => 'fieldset',
@@ -215,8 +215,9 @@ function nossasp_organization_fieldgroup_default_groups() {
         ),
         'full' => array(
           'format' => 'fieldset',
-          'exclude' => 0,
+          'exclude' => 1,
         ),
+        'description' => '',
         '4' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -254,14 +255,14 @@ function nossasp_organization_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'weight' => '11',
+        'weight' => '6',
         'label' => 'hidden',
         'teaser' => array(
           'format' => 'hidden',
           'exclude' => 1,
         ),
         'full' => array(
-          'format' => 'hidden',
+          'format' => 'no_style',
           'exclude' => 1,
         ),
         'description' => '',
@@ -301,7 +302,7 @@ function nossasp_organization_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'weight' => '5',
+        'weight' => '7',
         'label' => 'above',
         'teaser' => array(
           'format' => 'fieldset',
@@ -309,7 +310,7 @@ function nossasp_organization_fieldgroup_default_groups() {
         ),
         'full' => array(
           'format' => 'fieldset',
-          'exclude' => 0,
+          'exclude' => 1,
         ),
         'description' => '',
         '4' => array(
@@ -332,7 +333,7 @@ function nossasp_organization_fieldgroup_default_groups() {
     ),
     'weight' => '7',
     'fields' => array(
-      '0' => 'field_phone',
+      '0' => 'field_phone_text',
       '1' => 'field_email',
       '2' => 'field_twitter',
       '3' => 'field_facebook',
@@ -352,7 +353,7 @@ function nossasp_organization_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'weight' => '12',
+        'weight' => '-2',
         'label' => 'hidden',
         'teaser' => array(
           'format' => 'hidden',

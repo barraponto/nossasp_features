@@ -970,7 +970,7 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_address',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
-      'weight' => '-2',
+      'weight' => '-1',
       'parent' => '',
       'label' => array(
         'format' => 'hidden',
@@ -981,7 +981,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'full' => array(
         'format' => 'openlayers_map_nossasp',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '2' => array(
         'format' => 'hidden',
@@ -1062,7 +1062,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'full' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -1114,7 +1114,7 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_email',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
-      'weight' => '7',
+      'weight' => '8',
       'parent' => 'group_contact',
       'label' => array(
         'format' => 'inline',
@@ -1125,7 +1125,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'full' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -1159,7 +1159,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Email',
-      'weight' => '7',
+      'weight' => '8',
       'description' => '',
       'type' => 'email_textfield',
       'module' => 'email',
@@ -1171,7 +1171,7 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_facebook',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
-      'weight' => '9',
+      'weight' => '10',
       'parent' => 'group_contact',
       'label' => array(
         'format' => 'inline',
@@ -1182,7 +1182,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'full' => array(
         'format' => 'url',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -1230,30 +1230,30 @@ function nossasp_organization_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Facebook',
-      'weight' => '9',
+      'weight' => '10',
       'description' => '',
       'type' => 'link',
       'module' => 'link',
     ),
   );
 
-  // Exported field: field_phone
-  $fields['nossasp_organization-field_phone'] = array(
-    'field_name' => 'field_phone',
+  // Exported field: field_phone_text
+  $fields['nossasp_organization-field_phone_text'] = array(
+    'field_name' => 'field_phone_text',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
-      'weight' => '6',
+      'weight' => '7',
       'parent' => 'group_contact',
       'label' => array(
-        'format' => 'inline',
+        'format' => 'above',
       ),
       'teaser' => array(
-        'format' => 'hidden',
+        'format' => 'default',
         'exclude' => 1,
       ),
       'full' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -1273,26 +1273,31 @@ function nossasp_organization_content_default_fields() {
       ),
     ),
     'widget_active' => '1',
-    'type' => 'br_phone',
+    'type' => 'text',
     'required' => '0',
     'multiple' => '0',
-    'module' => 'phone',
+    'module' => 'text',
     'active' => '1',
-    'phone_country_code' => 0,
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
     'widget' => array(
+      'rows' => 5,
       'size' => '45',
       'default_value' => array(
         '0' => array(
           'value' => '',
-          '_error_element' => 'default_value_widget][field_phone][0][value',
+          '_error_element' => 'default_value_widget][field_phone_text][0][value',
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Telefone',
-      'weight' => '6',
-      'description' => '',
-      'type' => 'phone_textfield',
-      'module' => 'phone',
+      'label' => 'Telefone(s)',
+      'weight' => '7',
+      'description' => 'Para adicionar mais de um telefone, use / para separá-los.
+Exemplo: (12) 3456-7890 / (98) 7654-3210',
+      'type' => 'text_textfield',
+      'module' => 'text',
     ),
   );
 
@@ -1301,9 +1306,10 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_street',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
+      'weight' => '19',
+      'parent' => 'group_address',
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
@@ -1311,7 +1317,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'full' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -1426,7 +1432,7 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_twitter',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
-      'weight' => '8',
+      'weight' => '9',
       'parent' => 'group_contact',
       'label' => array(
         'format' => 'inline',
@@ -1437,7 +1443,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'full' => array(
         'format' => 'url',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -1485,7 +1491,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Twitter',
-      'weight' => '8',
+      'weight' => '9',
       'description' => '',
       'type' => 'link',
       'module' => 'link',
@@ -1497,7 +1503,7 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_website',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
-      'weight' => '10',
+      'weight' => '11',
       'parent' => 'group_contact',
       'label' => array(
         'format' => 'inline',
@@ -1508,7 +1514,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'full' => array(
         'format' => 'url',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -1556,7 +1562,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Site ou Blog',
-      'weight' => '10',
+      'weight' => '11',
       'description' => '',
       'type' => 'link',
       'module' => 'link',
@@ -1568,9 +1574,10 @@ function nossasp_organization_content_default_fields() {
     'field_name' => 'field_zip',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
+      'weight' => '20',
+      'parent' => 'group_address',
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
@@ -1578,7 +1585,7 @@ function nossasp_organization_content_default_fields() {
       ),
       'full' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -1639,6 +1646,7 @@ function nossasp_organization_content_default_fields() {
   t('Site ou Blog');
   t('Telefone');
   t('Telefone do Conselheiro');
+  t('Telefone(s)');
   t('Tipo de Organização');
   t('Twitter');
   t('Área de Atuação');

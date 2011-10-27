@@ -67,7 +67,7 @@ function nossasp_organization_openlayers_presets() {
   $openlayers_presets->description = 'Mapa para exibição das organizações do NossaSP';
   $openlayers_presets->data = array(
     'width' => 'auto',
-    'height' => '400px',
+    'height' => '300px',
     'image_path' => '',
     'css_path' => '',
     'proxy_host' => '',
