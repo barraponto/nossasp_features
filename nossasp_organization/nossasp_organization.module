@@ -12,6 +12,11 @@ function nossasp_organization_views_pre_view(&$view) {
       $view->display_handler->set_option('style_options', array('preset' => 'nossasp_all'));
     }
   }
+  elseif ($view->name == 'nossasp_organizations_search' &! empty($_GET['page'])) { 
+    if (is_numeric($_GET['page'])) {
+      $view->display_handler->set_option('offset', $_GET['page'] * 5);
+    }
+  }
 }
 
 function nossasp_organization_views_pre_render(&$view) {
