@@ -23,11 +23,11 @@ function nossasp_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-6' => array(
-          'module' => 'block',
-          'delta' => 6,
+        'boxes-nossasp_contexts_about' => array(
+          'module' => 'boxes',
+          'delta' => 'nossasp_contexts_about',
           'region' => 'sidebar_first',
-          'weight' => 1,
+          'weight' => 0,
         ),
       ),
     ),
@@ -89,17 +89,11 @@ function nossasp_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-2' => array(
-          'module' => 'block',
-          'delta' => 2,
-          'region' => 'sidebar_first',
-          'weight' => 0,
-        ),
         'nossasp_contexts-0' => array(
           'module' => 'nossasp_contexts',
           'delta' => 0,
           'region' => 'sidebar_first',
-          'weight' => 2,
+          'weight' => 6,
         ),
         'views-e4d64b6a71c9049b9bdd1225e0da8e25' => array(
           'module' => 'views',
