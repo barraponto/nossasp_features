@@ -2033,7 +2033,7 @@ function nossasp_organization_views_default_views() {
   $handler->override_option('empty_format', '1');
   $handler->override_option('use_ajax', TRUE);
   $handler->override_option('items_per_page', 5);
-  $handler->override_option('use_pager', 'mini');
+  $handler->override_option('use_pager', '1');
   $handler->override_option('row_options', array(
     'inline' => array(),
     'separator' => '',
