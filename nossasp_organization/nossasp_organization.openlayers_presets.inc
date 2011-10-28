@@ -240,7 +240,7 @@ function nossasp_organization_openlayers_presets() {
       ),
       'openlayers_behavior_zoomtolayer' => array(
         'zoomtolayer' => 'nossasp_organizations_search_openlayers_1',
-        'point_zoom_level' => '15',
+        'point_zoom_level' => '5',
       ),
     ),
     'default_layer' => 'google_normal',

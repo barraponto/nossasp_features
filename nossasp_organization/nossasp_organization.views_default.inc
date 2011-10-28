@@ -1585,6 +1585,31 @@ function nossasp_organization_views_default_views() {
       'relationship' => 'none',
     ),
   ));
+  $handler->override_option('sorts', array(
+    'type' => array(
+      'order' => 'ASC',
+      'id' => 'type',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+    'distance' => array(
+      'order' => 'ASC',
+      'location_provider' => 'circle',
+      'id' => 'distance',
+      'table' => 'openlayers_proximity',
+      'field' => 'distance',
+      'relationship' => 'none',
+    ),
+    'changed' => array(
+      'order' => 'DESC',
+      'granularity' => 'second',
+      'id' => 'changed',
+      'table' => 'node',
+      'field' => 'changed',
+      'relationship' => 'none',
+    ),
+  ));
   $handler->override_option('filters', array(
     'type' => array(
       'operator' => 'in',
@@ -1728,8 +1753,8 @@ function nossasp_organization_views_default_views() {
   ));
   $handler->override_option('title', 'NossaSP Search Layer');
   $handler->override_option('use_ajax', TRUE);
-  $handler->override_option('items_per_page', 5);
-  $handler->override_option('use_pager', 'mini');
+  $handler->override_option('items_per_page', 9);
+  $handler->override_option('use_pager', '1');
   $handler->override_option('distinct', 1);
   $handler->override_option('style_plugin', 'openlayers_data');
   $handler->override_option('style_options', array(
@@ -1879,6 +1904,31 @@ function nossasp_organization_views_default_views() {
       'id' => 'tid_1',
       'table' => 'term_node',
       'field' => 'tid',
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('sorts', array(
+    'type' => array(
+      'order' => 'ASC',
+      'id' => 'type',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+    'distance' => array(
+      'order' => 'ASC',
+      'location_provider' => 'circle',
+      'id' => 'distance',
+      'table' => 'openlayers_proximity',
+      'field' => 'distance',
+      'relationship' => 'none',
+    ),
+    'changed' => array(
+      'order' => 'DESC',
+      'granularity' => 'second',
+      'id' => 'changed',
+      'table' => 'node',
+      'field' => 'changed',
       'relationship' => 'none',
     ),
   ));
@@ -2032,8 +2082,9 @@ function nossasp_organization_views_default_views() {
   $handler->override_option('empty', 'Não foi encontrada nenhuma organização a partir da sua busca.');
   $handler->override_option('empty_format', '1');
   $handler->override_option('use_ajax', TRUE);
-  $handler->override_option('items_per_page', 5);
+  $handler->override_option('items_per_page', 9);
   $handler->override_option('use_pager', '1');
+  $handler->override_option('distinct', 1);
   $handler->override_option('row_options', array(
     'inline' => array(),
     'separator' => '',
