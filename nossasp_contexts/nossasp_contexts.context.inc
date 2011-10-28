@@ -95,9 +95,9 @@ function nossasp_contexts_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => 0,
         ),
-        'block-3' => array(
-          'module' => 'block',
-          'delta' => 3,
+        'nossasp_contexts-0' => array(
+          'module' => 'nossasp_contexts',
+          'delta' => 0,
           'region' => 'sidebar_first',
           'weight' => 2,
         ),
