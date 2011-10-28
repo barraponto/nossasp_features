@@ -18,8 +18,7 @@ function nossasp_contexts_default_box() {
 
 A busca de organizações  pode ser feita por nome, por endereço, por tipo ou por áreas de atuação.  
 
-Se você é responsável por uma iniciativa como esta, também pode fazer parte do mapa. Para cadastrar sua organização basta criar uma conta com nome de usuário e senha, 
-assim você poderá editar as informações  fornecidas sempre que necessário (não há limite para cadastro de organizações por usuário). 
+Se você é responsável por uma iniciativa como esta, também pode fazer parte do mapa. Para cadastrar sua organização basta criar uma conta com nome de usuário e senha, assim você poderá editar as informações  fornecidas sempre que necessário (não há limite para cadastro de organizações por usuário). 
 
 Participe!',
     'format' => '1',
