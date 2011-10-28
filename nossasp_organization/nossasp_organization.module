@@ -12,9 +12,9 @@ function nossasp_organization_views_pre_view(&$view) {
       $view->display_handler->set_option('style_options', array('preset' => 'nossasp_all'));
     }
   }
-  elseif ($view->name == 'nossasp_organizations_search' &! empty($_GET['page'])) { 
+  elseif ($view->name == 'nossasp_organizations_search' && $view->current_display == 'openlayers_1' &! empty($_GET['page'])) { 
     if (is_numeric($_GET['page'])) {
-      $view->display_handler->set_option('offset', $_GET['page'] * 5);
+      $view->display_handler->set_option('offset', $_GET['page'] * 9);
     }
   }
 }
@@ -24,6 +24,8 @@ function nossasp_organization_views_pre_render(&$view) {
     $header_text = '<p class="counter"><span class="number">' . $view->total_rows  . '</span> resultados</p>';
     $header_text .= '<p class="download">' . l('Baixe o banco de dados do mapa', 'organizations/data') . '</p>';
     $view->display_handler->set_option('header', $header_text);
+  }
+  elseif ($view->name == 'nossasp_organizations_search' && $view->current_display == 'openlayers_1') {
   }
 }
 
@@ -56,7 +58,7 @@ function nossasp_organization_form_alter(&$form, &$form_state, $form_id) {
 
 function nossasp_organization_exposed_search($form, &$form_state) {
 
-  $form['circle']['value']['#value'] = 5;
+  $form['circle']['value']['#value'] = 3;
   $form['circle']['value']['#type'] = $form['circle_op']['#type'] = 'hidden';
   unset($form['circle']['location']['#field_prefix']);
   $form['circle']['min']['#access'] = $form['circle']['max']['#access'] = FALSE;
