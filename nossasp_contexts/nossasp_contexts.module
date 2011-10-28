@@ -42,3 +42,23 @@ function nossasp_contexts_init() {
     }
   }
 }
+
+function nossasp_contexts_block($op = 'list', $delta = 0, $edit = array()) {
+  if ($op == 'list') {
+    $blocks[0] = array(
+      'info' => 'Cadastre sua organização',
+    );
+    return $blocks;
+  }
+  if ($op == 'view') {
+    switch ($delta) {
+      case 0:
+        $block = array(
+          'subject' => '',
+          'content' => '<p>' . l('Cadastre sua organização', 'node/add/nossasp-organization') . '</p>',
+        );
+        break;
+    }
+    return $block;
+  }
+}
