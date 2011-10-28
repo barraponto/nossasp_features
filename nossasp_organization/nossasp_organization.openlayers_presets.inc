@@ -227,8 +227,8 @@ function nossasp_organization_openlayers_presets() {
     'behaviors' => array(
       'openlayers_behavior_popup' => array(
         'layers' => array(
+          'nossasp_organizations_search_openlayers_2' => 'nossasp_organizations_search_openlayers_2',
           'nossasp_organizations_search_openlayers_1' => 'nossasp_organizations_search_openlayers_1',
-          'nossasp_organizations_search_openlayers_2' => 0,
           'nossasp_districts' => 0,
         ),
       ),
@@ -255,6 +255,10 @@ function nossasp_organization_openlayers_presets() {
         'default' => 'default',
         'select' => 'default',
         'temporary' => 'default',
+      ),
+      'nossasp_organizations_search_openlayers_2' => array(
+        'default' => 'nossasp_organization_small_icons',
+        'select' => 'nossasp_organization_big_icons',
       ),
       'nossasp_organizations_search_openlayers_1' => array(
         'default' => 'nossasp_organization_icons',
