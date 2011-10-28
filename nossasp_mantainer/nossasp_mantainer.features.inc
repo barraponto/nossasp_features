@@ -11,26 +11,6 @@ function nossasp_mantainer_ctools_plugin_api() {
 }
 
 /**
- * Implementation of hook_node_info().
- */
-function nossasp_mantainer_node_info() {
-  $items = array(
-    'nossasp_mantainer' => array(
-      'name' => t('Mantenedor'),
-      'module' => 'features',
-      'description' => t('Perfil dos mantenedores, responsáveis por informar e atualizar os dados das organizações que representam.'),
-      'has_title' => '1',
-      'title_label' => t('Nome Completo'),
-      'has_body' => '0',
-      'body_label' => '',
-      'min_word_count' => '0',
-      'help' => '',
-    ),
-  );
-  return $items;
-}
-
-/**
  * Implementation of hook_rules_defaults().
  */
 function nossasp_mantainer_rules_defaults() {
