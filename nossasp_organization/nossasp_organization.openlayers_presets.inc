@@ -67,7 +67,7 @@ function nossasp_organization_openlayers_presets() {
   $openlayers_presets->description = 'Mapa para exibição das organizações do NossaSP';
   $openlayers_presets->data = array(
     'width' => 'auto',
-    'height' => '300px',
+    'height' => '240px',
     'image_path' => '',
     'css_path' => '',
     'proxy_host' => '',
@@ -92,7 +92,6 @@ function nossasp_organization_openlayers_presets() {
       'openlayers_behavior_navigation' => array(
         'zoomWheelEnabled' => 1,
       ),
-      'openlayers_behavior_panzoom' => array(),
       'openlayers_behavior_zoomtolayer' => array(
         'zoomtolayer' => 'nossasp_organizations_layer_openlayers_1',
         'point_zoom_level' => '13',
