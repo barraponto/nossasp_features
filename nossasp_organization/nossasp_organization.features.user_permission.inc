@@ -276,6 +276,15 @@ function nossasp_organization_user_default_permissions() {
     ),
   );
 
+  // Exported permission: override nossasp_council published option
+  $permissions['override nossasp_council published option'] = array(
+    'name' => 'override nossasp_council published option',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'manager',
+    ),
+  );
+
   // Exported permission: override nossasp_organization published option
   $permissions['override nossasp_organization published option'] = array(
     'name' => 'override nossasp_organization published option',
