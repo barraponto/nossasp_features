@@ -46,15 +46,15 @@ function nossasp_organization_strongarm() {
   $strongarm->name = 'content_extra_weights_nossasp_organization';
   $strongarm->value = array(
     'title' => '-5',
-    'body_field' => '0',
-    'revision_information' => '1',
-    'author' => '2',
-    'options' => '3',
-    'menu' => '-3',
-    'taxonomy' => '-4',
-    'path' => '4',
-    'path_redirect' => '5',
-    'primary_term' => '0',
+    'body_field' => '2',
+    'revision_information' => '3',
+    'author' => '4',
+    'options' => '5',
+    'menu' => '-2',
+    'taxonomy' => '-3',
+    'path' => '6',
+    'path_redirect' => '7',
+    'primary_term' => '1',
   );
   $export['content_extra_weights_nossasp_organization'] = $strongarm;
 

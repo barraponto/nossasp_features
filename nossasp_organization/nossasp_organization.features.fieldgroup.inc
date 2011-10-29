@@ -240,10 +240,11 @@ function nossasp_organization_fieldgroup_default_groups() {
         ),
       ),
     ),
-    'weight' => '18',
+    'weight' => '10',
     'fields' => array(
       '0' => 'field_street',
-      '1' => 'field_zip',
+      '1' => 'field_complemento',
+      '2' => 'field_zip',
     ),
   );
 
@@ -288,7 +289,7 @@ function nossasp_organization_fieldgroup_default_groups() {
         ),
       ),
     ),
-    'weight' => '6',
+    'weight' => '8',
     'fields' => array(
       '0' => 'field_atuacao',
     ),
@@ -335,7 +336,7 @@ function nossasp_organization_fieldgroup_default_groups() {
         ),
       ),
     ),
-    'weight' => '7',
+    'weight' => '9',
     'fields' => array(
       '0' => 'field_phone_text',
       '1' => 'field_email',
@@ -386,7 +387,7 @@ function nossasp_organization_fieldgroup_default_groups() {
         ),
       ),
     ),
-    'weight' => '-2',
+    'weight' => '-1',
     'fields' => array(
       '0' => 'field_tipo',
     ),

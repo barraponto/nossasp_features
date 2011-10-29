@@ -1047,7 +1047,7 @@ Exemplo: (12) 3456-7890 / (98) 7654-3210',
       'autocompletion_field_zip_content' => '[postal_code]',
       'autocompletion_field_zip_type' => 'input',
       'label' => 'Endereço',
-      'weight' => '-1',
+      'weight' => 0,
       'description' => 'Entre o endereço da organização. Espere pelo recurso de autocompletar e escolha da lista.',
       'type' => 'openlayers_geocoder_widget',
       'module' => 'openlayers_geocoder',
@@ -1114,6 +1114,68 @@ Exemplo: (12) 3456-7890 / (98) 7654-3210',
       'description' => 'Marque todas as áreas em que a organização atua.',
       'type' => 'content_taxonomy_options',
       'module' => 'content_taxonomy_options',
+    ),
+  );
+
+  // Exported field: field_complemento
+  $fields['nossasp_organization-field_complemento'] = array(
+    'field_name' => 'field_complemento',
+    'type_name' => 'nossasp_organization',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'rows' => 5,
+      'size' => '45',
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_complemento][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Complemento',
+      'weight' => '20',
+      'description' => '',
+      'type' => 'text_textfield',
+      'module' => 'text',
     ),
   );
 
@@ -1303,6 +1365,68 @@ Exemplo: (12) 3456-7890 / (98) 7654-3210',
       'weight' => '7',
       'description' => 'Para adicionar mais de um telefone, use / para separá-los.
 Exemplo: (12) 3456-7890 / (98) 7654-3210',
+      'type' => 'text_textfield',
+      'module' => 'text',
+    ),
+  );
+
+  // Exported field: field_sigla
+  $fields['nossasp_organization-field_sigla'] = array(
+    'field_name' => 'field_sigla',
+    'type_name' => 'nossasp_organization',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'rows' => 5,
+      'size' => '45',
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_sigla][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Sigla',
+      'weight' => '-4',
+      'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
     ),
@@ -1630,7 +1754,7 @@ Exemplo: (12) 3456-7890 / (98) 7654-3210',
       ),
       'default_value_php' => NULL,
       'label' => 'CEP',
-      'weight' => '20',
+      'weight' => '21',
       'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -1641,6 +1765,7 @@ Exemplo: (12) 3456-7890 / (98) 7654-3210',
   // Included for use with string extractors like potx.
   t('CEP');
   t('Cargo');
+  t('Complemento');
   t('Conselheiros');
   t('Conselho');
   t('Email');
@@ -1648,6 +1773,7 @@ Exemplo: (12) 3456-7890 / (98) 7654-3210',
   t('Endereço');
   t('Facebook');
   t('Rua');
+  t('Sigla');
   t('Site ou Blog');
   t('Telefone do Conselheiro');
   t('Telefone(s)');

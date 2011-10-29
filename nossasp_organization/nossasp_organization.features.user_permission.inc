@@ -120,7 +120,8 @@ function nossasp_organization_user_default_permissions() {
     'name' => 'edit field_address',
     'roles' => array(
       '0' => 'administrator',
-      '1' => 'authenticated user',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
     ),
   );
 
@@ -182,7 +183,8 @@ function nossasp_organization_user_default_permissions() {
     'name' => 'edit field_email',
     'roles' => array(
       '0' => 'administrator',
-      '1' => 'authenticated user',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
     ),
   );
 
@@ -200,6 +202,7 @@ function nossasp_organization_user_default_permissions() {
     'name' => 'edit field_phone_text',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'anonymous user',
     ),
   );
 
@@ -217,7 +220,8 @@ function nossasp_organization_user_default_permissions() {
     'name' => 'edit field_tipo',
     'roles' => array(
       '0' => 'administrator',
-      '1' => 'authenticated user',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
     ),
   );
 
@@ -235,7 +239,8 @@ function nossasp_organization_user_default_permissions() {
     'name' => 'edit field_website',
     'roles' => array(
       '0' => 'administrator',
-      '1' => 'authenticated user',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
     ),
   );
 
@@ -383,6 +388,8 @@ function nossasp_organization_user_default_permissions() {
     'name' => 'view field_phone_text',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
     ),
   );
 
