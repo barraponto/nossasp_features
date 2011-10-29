@@ -43,11 +43,11 @@ function nossasp_organization_form_alter(&$form, &$form_state, $form_id) {
     $form['tid_1']['#attributes'] = array('class' => 'jquery_dropdown');
   }
   elseif ($form_id == 'nossasp_organization_node_form') {
-    global $user;
     $form['field_tipo']['#title'] = $form['field_atuacao']['#title'] = FALSE;
     if (user_access('create municipal councils')) {
       drupal_add_js(drupal_get_path('module', 'nossasp_organization') . '/nossasp-organization-node-form.js');
     }
+    global $user;
     if ($user->uid == 0) {
       $form['#after_build'][] = 'nossasp_organization_add_org_on_signup';
       unset($form['body_field']['format']);
@@ -55,6 +55,9 @@ function nossasp_organization_form_alter(&$form, &$form_state, $form_id) {
       unset($form['body_field']['teaser_include']);
       unset($form['body_field']['#after_build']);
       $form['body_field']['body']['#rows'] = 5;
+      $form['body_field']['body']['#resizable'] = FALSE;
+      $form['body_field']['body']['#title'] = 'Faça uma breve descrição sobre as formas de atuação e participação promovidas pela organização (10 linhas)';
+      $form['title']['#title'] = 'Nome da Organização';
     }
   }
   elseif (in_array($form_id, array('contact_mail_page', 'user_login', 'user_pass'))) { 
@@ -86,5 +89,6 @@ function nossasp_organization_add_org_on_signup($form, &$form_state) {
   $form['group_tipo']['field_tipo']['value']['#type'] = 'select';
   unset($form['field_address']['map']);
   unset($form['field_address']['openlayers_wkt']);
+  unset($form['buttons']['preview']);
   return $form;
 }
