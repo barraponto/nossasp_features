@@ -55,7 +55,7 @@ function nossasp_organization_openlayers_styles() {
   $openlayers_styles->title = 'NossaSP Icones pequenos';
   $openlayers_styles->description = 'Icones pequenos para as Organizações do Nossa São Paulo';
   $openlayers_styles->data = array(
-    'externalGraphic' => '/profiles/nossasp/modules/nossasp_features/nossasp_organization/icons/small-${field_tipo_value}-${tid}.png',
+    'externalGraphic' => '/profiles/nossasp/modules/nossasp_features/nossasp_organization/icons/${field_tipo_value}-${tid}.png',
     'pointRadius' => 10,
     'fillColor' => '#EE9900',
     'strokeColor' => '#EE9900',
