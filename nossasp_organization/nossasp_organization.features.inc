@@ -67,6 +67,103 @@ function nossasp_organization_node_info() {
 function nossasp_organization_rules_defaults() {
   return array(
     'rules' => array(
+      'rules_nossasp_organization_register_redirect' => array(
+        '#type' => 'rule',
+        '#set' => 'event_node_insert',
+        '#label' => 'nossasp_organization_register_redirect',
+        '#active' => 1,
+        '#weight' => '0',
+        '#categories' => array(
+          '0' => 'nossasp_organization',
+        ),
+        '#status' => 'default',
+        '#conditions' => array(
+          '0' => array(
+            '#weight' => 0,
+            '#info' => array(
+              'label' => 'Created content é Organização',
+              'arguments' => array(
+                'node' => array(
+                  'type' => 'node',
+                  'label' => 'Conteúdo',
+                ),
+              ),
+              'module' => 'Node',
+            ),
+            '#name' => 'rules_condition_content_is_type',
+            '#settings' => array(
+              'type' => array(
+                'nossasp_organization' => 'nossasp_organization',
+              ),
+              '#argument map' => array(
+                'node' => 'node',
+              ),
+            ),
+            '#type' => 'condition',
+          ),
+          '1' => array(
+            '#type' => 'condition',
+            '#settings' => array(
+              'roles' => array(
+                '0' => 1,
+              ),
+              'operation' => 'OR',
+              '#argument map' => array(
+                'user' => 'user',
+              ),
+            ),
+            '#name' => 'rules_condition_user_hasrole',
+            '#info' => array(
+              'label' => 'User has role(s)',
+              'arguments' => array(
+                'user' => array(
+                  'type' => 'user',
+                  'label' => 'Usuário',
+                ),
+              ),
+              'module' => 'User',
+            ),
+            '#weight' => 0,
+          ),
+        ),
+        '#actions' => array(
+          '0' => array(
+            '#weight' => 0,
+            '#info' => array(
+              'label' => 'Redirecionamento de página',
+              'module' => 'System',
+              'eval input' => array(
+                '0' => 'path',
+                '1' => 'query',
+                '2' => 'fragment',
+              ),
+            ),
+            '#name' => 'rules_action_drupal_goto',
+            '#settings' => array(
+              'path' => 'obrigado',
+              'query' => '',
+              'fragment' => '',
+              'force' => 1,
+              'immediate' => 0,
+              '#eval input' => array(
+                'token_rules_input_evaluator' => array(
+                  'path' => array(
+                    '0' => ':global',
+                  ),
+                  'query' => array(
+                    '0' => ':global',
+                  ),
+                  'fragment' => array(
+                    '0' => ':global',
+                  ),
+                ),
+              ),
+            ),
+            '#type' => 'action',
+          ),
+        ),
+        '#version' => 6003,
+      ),
       'rules_nossasp_organization_new_organization_notification' => array(
         '#type' => 'rule',
         '#set' => 'event_node_insert',
