@@ -2,6 +2,17 @@
 
 include_once('nossasp_organization.features.inc');
 
+function nossasp_organization_theme($existing, $type, $theme, $path) {
+  return array(
+    'thank-you' => array(
+      'template' => 'thank-you',
+    ),
+    'four-oh-four' => array(
+      'template' => 'four-oh-four',
+    ),
+  );
+}
+
 function nossasp_organization_menu() {
 
   $items = array(
@@ -21,11 +32,11 @@ function nossasp_organization_menu() {
 }
 
 function nossasp_organization_thankyou() {
-  return 'Sucesso';
+  return theme('thank-you');
 }
 
 function nossasp_organization_fail() {
-  return 'Erro';
+  return theme('four-oh-four');
 }
 
 function nossasp_organization_views_pre_view(&$view) {
@@ -96,7 +107,6 @@ function nossasp_organization_form_alter(&$form, &$form_state, $form_id) {
 }
 
 function nossasp_organization_exposed_search($form, &$form_state) {
-
   $form['circle']['value']['#value'] = 3;
   $form['circle']['value']['#type'] = $form['circle_op']['#type'] = 'hidden';
   unset($form['circle']['location']['#field_prefix']);
