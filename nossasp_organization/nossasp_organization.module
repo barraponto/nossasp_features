@@ -84,6 +84,7 @@ function nossasp_organization_form_alter(&$form, &$form_state, $form_id) {
       $form['body_field']['body']['#resizable'] = FALSE;
       $form['body_field']['body']['#title'] = 'Faça uma breve descrição sobre as formas de atuação e participação promovidas pela organização (10 linhas)';
       $form['title']['#title'] = 'Nome da Organização';
+      $form['#validate'][] = 'nossasp_organization_savetheaddress';
     }
   }
   elseif (in_array($form_id, array('contact_mail_page', 'user_login', 'user_pass'))) { 
@@ -113,8 +114,23 @@ function nossasp_organization_exposed_search($form, &$form_state) {
 
 function nossasp_organization_add_org_on_signup($form, &$form_state) { 
   $form['group_tipo']['field_tipo']['value']['#type'] = 'select';
-  unset($form['field_address']['map']);
-  unset($form['field_address']['openlayers_wkt']);
   unset($form['buttons']['preview']);
+  $form['group_address']['field_street'][0]['value']['#autocomplete_path'] = 'openlayers/geocoder/response';
   return $form;
+}
+
+function nossasp_organization_savetheaddress($form, &$form_state) {
+  $possible = openlayers_geocoder_response($form_state['values']['field_street'][0]['value']);
+
+  if (!empty($possible[0])) {
+    $components = $possible[0]['components'];
+    if (!empty($components['postal_code'])) {
+      $form_state['values']['field_street'][0]['value'] = str_replace($components['postal_code'] . ', ', '', $form_state['values']['field_street'][0]['value']);
+      $form_state['values']['field_zip'][0]['value'] = $components['postal_code'];
+    }
+    $form_state['values']['field_address'][0]['openlayers_wkt'] = 'GEOMETRYCOLLECTION(POINT(' . $possible[0]['location']['lng'] . ' ' . $possible[0]['location']['lat'] . '))';
+  }
+
+  //let's save the atuacao field as well
+  $form_state['values']['field_atuacao'][0]['value'] = $form_state['values']['primaryterm'];
 }
