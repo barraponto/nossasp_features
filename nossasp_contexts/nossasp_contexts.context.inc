@@ -13,10 +13,9 @@ function nossasp_contexts_context_default_contexts() {
   $context->description = 'Bloco de descrição do projeto NossaSP';
   $context->tag = 'sitewide';
   $context->conditions = array(
-    'context' => array(
+    'sitewide' => array(
       'values' => array(
-        '~nossasp_search_result_node' => '~nossasp_search_result_node',
-        '~nossasp_search_results' => '~nossasp_search_results',
+        1 => 1,
       ),
     ),
   );
