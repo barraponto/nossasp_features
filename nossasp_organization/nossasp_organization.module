@@ -78,6 +78,9 @@ function nossasp_organization_form_alter(&$form, &$form_state, $form_id) {
     $form['tid']['#type'] = 'checkboxes';
     $form['#after_build'][] = 'nossasp_organization_exposed_search';
     $form['tid_1']['#attributes'] = array('class' => 'jquery_dropdown');
+    // Have them order alfabetically
+    natsort($form['tid_1']['#options']);
+    natsort($form['tid']['#options']);
   }
   elseif ($form_id == 'nossasp_organization_node_form') {
     $form['field_tipo']['#title'] = $form['field_atuacao']['#title'] = FALSE;
@@ -113,8 +116,9 @@ function nossasp_organization_exposed_search($form, &$form_state) {
   $form['circle']['min']['#access'] = $form['circle']['max']['#access'] = FALSE;
   $form['submit']['#weight'] = 0;
 
+
   // Workaroud for the ugly <All> option
-  $form['tid_1']['#options']['All'] = 'Tipo de Organização';
+  $form['tid_1']['#options']['All'] = 'Todos os tipos de organização';
 
   // turn apply into OK
   $form['submit']['#value'] = 'Buscar';
