@@ -211,7 +211,7 @@ function nossasp_organization_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'weight' => '18',
+        'weight' => '10',
         'label' => 'hidden',
         'teaser' => array(
           'format' => 'hidden',
@@ -260,7 +260,7 @@ function nossasp_organization_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'weight' => '6',
+        'weight' => '8',
         'label' => 'hidden',
         'teaser' => array(
           'format' => 'hidden',
@@ -307,7 +307,7 @@ function nossasp_organization_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'weight' => '7',
+        'weight' => '9',
         'label' => 'hidden',
         'teaser' => array(
           'format' => 'hidden',
@@ -358,7 +358,7 @@ function nossasp_organization_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'weight' => '-2',
+        'weight' => '-1',
         'label' => 'hidden',
         'teaser' => array(
           'format' => 'hidden',

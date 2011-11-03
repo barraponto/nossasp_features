@@ -978,7 +978,7 @@ Exemplo: (12) 3456-7890 / (98) 7654-3210',
     'field_name' => 'field_address',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
-      'weight' => '-1',
+      'weight' => 0,
       'parent' => '',
       'label' => array(
         'format' => 'hidden',
@@ -1122,9 +1122,10 @@ Exemplo: (12) 3456-7890 / (98) 7654-3210',
     'field_name' => 'field_complemento',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
+      'weight' => '20',
+      'parent' => 'group_address',
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
@@ -1375,17 +1376,18 @@ Exemplo: (12) 3456-7890 / (98) 7654-3210',
     'field_name' => 'field_sigla',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
+      'weight' => '-4',
+      'parent' => '',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       'full' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -1703,7 +1705,7 @@ Exemplo: (12) 3456-7890 / (98) 7654-3210',
     'field_name' => 'field_zip',
     'type_name' => 'nossasp_organization',
     'display_settings' => array(
-      'weight' => '20',
+      'weight' => '21',
       'parent' => 'group_address',
       'label' => array(
         'format' => 'inline',
