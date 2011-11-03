@@ -59,7 +59,7 @@ function nossasp_organization_views_pre_view(&$view) {
 function nossasp_organization_views_pre_render(&$view) {
   if ($view->name == 'nossasp_organizations_search_box') {
     $header_text = '<p class="counter"><span class="number">' . $view->total_rows  . '</span> resultados</p>';
-    $header_text .= '<p class="download">' . l('Baixe o banco de dados do mapa', 'organizations/data') . '</p>';
+    $header_text .= '<p class="download">' . l('Baixe o banco de dados do mapa', 'sites/default/files/mpc-dados.csv') . '</p>';
     $view->display_handler->set_option('header', $header_text);
   }
   elseif ($view->name == 'nossasp_organizations_search' && $view->current_display == 'openlayers_1') {
