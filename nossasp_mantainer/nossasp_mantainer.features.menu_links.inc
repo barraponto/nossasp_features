@@ -25,7 +25,7 @@ function nossasp_mantainer_menu_default_menu_links() {
     'menu_name' => 'set-mantainer',
     'link_path' => 'node/add/nossasp-organization',
     'router_path' => 'node/add/nossasp-organization',
-    'link_title' => 'Cadastrar Organização',
+    'link_title' => 'Cadastrar outra Organização',
     'options' => array(),
     'module' => 'toolbar',
     'hidden' => '0',
@@ -37,7 +37,7 @@ function nossasp_mantainer_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Atualizar Organizações Cadastradas');
-  t('Cadastrar Organização');
+  t('Cadastrar outra Organização');
 
 
   return $menu_links;
