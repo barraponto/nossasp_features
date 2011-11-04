@@ -146,5 +146,5 @@ function nossasp_organization_savetheaddress($form, &$form_state) {
   }
 
   //let's save the atuacao field as well
-  $form_state['values']['field_atuacao'][0]['value'] = $form_state['values']['primaryterm'];
+  $form_state['values']['field_atuacao'][] = array('value' => $form_state['values']['primaryterm']);
 }
