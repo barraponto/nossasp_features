@@ -129,7 +129,8 @@ function nossasp_organization_user_default_permissions() {
     'name' => 'edit field_atuacao',
     'roles' => array(
       '0' => 'administrator',
-      '1' => 'authenticated user',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
     ),
   );
 
