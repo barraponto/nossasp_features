@@ -1990,6 +1990,23 @@ print l($value, \'node/\' . $row->nid, array(\'query\' => $query)); ?>',
   $handler->override_option('title', 'NossaSP All Results Layer');
   $handler->override_option('items_per_page', 0);
   $handler->override_option('use_pager', FALSE);
+  $handler->override_option('style_options', array(
+    'grouping' => '',
+    'data_source' => array(
+      'value' => 'openlayers_wkt',
+      'other_lat' => 'field_address_openlayers_wkt',
+      'other_lon' => 'field_address_openlayers_wkt',
+      'openlayers_wkt' => 'field_address_openlayers_wkt',
+      'other_top' => 'field_address_openlayers_wkt',
+      'other_right' => 'field_address_openlayers_wkt',
+      'other_bottom' => 'field_address_openlayers_wkt',
+      'other_left' => 'field_address_openlayers_wkt',
+      'name_field' => 'php',
+      'keep_orig_name_field' => 1,
+      'description_field' => '',
+      'keep_orig_desc_field' => 1,
+    ),
+  ));
   $handler->override_option('row_plugin', '');
   $handler->override_option('displays', array());
 
