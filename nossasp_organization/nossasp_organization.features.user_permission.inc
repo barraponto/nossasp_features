@@ -206,6 +206,15 @@ function nossasp_organization_user_default_permissions() {
     ),
   );
 
+  // Exported permission: edit field_sigla
+  $permissions['edit field_sigla'] = array(
+    'name' => 'edit field_sigla',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+    ),
+  );
+
   // Exported permission: edit field_street
   $permissions['edit field_street'] = array(
     'name' => 'edit field_street',
@@ -387,6 +396,16 @@ function nossasp_organization_user_default_permissions() {
   // Exported permission: view field_phone_text
   $permissions['view field_phone_text'] = array(
     'name' => 'view field_phone_text',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_sigla
+  $permissions['view field_sigla'] = array(
+    'name' => 'view field_sigla',
     'roles' => array(
       '0' => 'administrator',
       '1' => 'anonymous user',
