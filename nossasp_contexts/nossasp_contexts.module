@@ -28,7 +28,7 @@ function nossasp_contexts_context_plugins() {
 }
 
 function nossasp_contexts_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
-  if ($op == 'view' && $node->type == 'nossasp_organization' && (isset($_GET['circle']) || isset($_GET['title']))) {
+  if ($op == 'view' && in_array($node->type, array('nossasp_organization', 'nossasp_council')) && (isset($_GET['circle']) || isset($_GET['title']))) {
     if ($plugin = context_get_plugin('condition', 'nossasp_contexts_search_results')) {
       $plugin->execute();
     }
