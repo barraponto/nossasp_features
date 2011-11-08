@@ -84,6 +84,7 @@ function nossasp_organization_form_alter(&$form, &$form_state, $form_id) {
   }
   elseif ($form_id == 'nossasp_organization_node_form') {
     $form['field_tipo']['#title'] = $form['field_atuacao']['#title'] = FALSE;
+    $form['#validate'][] = 'nossasp_organization_require_address';
     if (user_access('create municipal councils')) {
       drupal_add_js(drupal_get_path('module', 'nossasp_organization') . '/nossasp-organization-node-form.js');
     }
@@ -124,6 +125,12 @@ function nossasp_organization_exposed_search($form, &$form_state) {
   $form['submit']['#value'] = 'Buscar';
 
   return $form;
+}
+
+function nossasp_organization_require_address($form, &$form_state) {
+  if ($form_state['values']['field_tipo'][0]['value'] != '22' && empty($form_state['values']['field_street'][0]['value'])) {
+    form_set_error($form_state['values']['field_street'][0]['_error_element'], 'Apenas organizações virtuais podem ser cadastradas sem endereço.'); 
+  }
 }
 
 function nossasp_organization_add_org_on_signup($form, &$form_state) { 
