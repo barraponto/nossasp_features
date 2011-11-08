@@ -159,6 +159,7 @@ function nossasp_organization_openlayers_presets() {
       'openlayers_behavior_navigation' => array(
         'zoomWheelEnabled' => 1,
       ),
+      'openlayers_behavior_panzoombar' => array(),
       'openlayers_behavior_zoomtolayer' => array(
         'zoomtolayer' => 'google_normal',
         'point_zoom_level' => '15',
@@ -237,6 +238,7 @@ function nossasp_organization_openlayers_presets() {
       'openlayers_behavior_navigation' => array(
         'zoomWheelEnabled' => 1,
       ),
+      'openlayers_behavior_panzoombar' => array(),
       'openlayers_behavior_zoomtolayer' => array(
         'zoomtolayer' => 'nossasp_organizations_search_openlayers_1',
         'point_zoom_level' => '5',
