@@ -14,13 +14,11 @@ function nossasp_contexts_default_box() {
   $box->title = 'O que é o Mapa da Participação Cidadã?';
   $box->description = 'Sobre o projeto';
   $box->options = array(
-    'body' => 'Conheça as organizações que abrem espaços à participação cidadã para a construção de uma cidade de São Paulo mais justa, democrática e sustentável. 
+    'body' => 'O Mapa da Participação Cidadã é uma plataforma que permite ao usuário buscar ou cadastrar organizações que proporcionam diversas formas de participação cidadã no município de São Paulo.
 
-A busca de organizações  pode ser feita por nome, por endereço, por tipo ou por áreas de atuação.  
+Se você é responsável por uma iniciativa como esta, também pode fazer parte do Mapa. Para cadastrar sua organização basta criar uma conta com nome de usuário e senha. A adesão é totalmente gratuita e você poderá editar as informações sempre que quiser.
 
-Se você é responsável por uma iniciativa como esta, também pode fazer parte do mapa. Para cadastrar sua organização basta criar uma conta com nome de usuário e senha, assim você poderá editar as informações  fornecidas sempre que necessário (não há limite para cadastro de organizações por usuário). 
-
-Participe!',
+Participe! Assim poderemos oferecer um conjunto cada vez maior de informações para estimular a mobilização da sociedade e  fortalecer as organizações sociais.',
     'format' => '1',
   );
   $export['nossasp_contexts_about'] = $box;
