@@ -212,6 +212,7 @@ function nossasp_organization_user_default_permissions() {
     'roles' => array(
       '0' => 'administrator',
       '1' => 'anonymous user',
+      '2' => 'authenticated user',
     ),
   );
 
