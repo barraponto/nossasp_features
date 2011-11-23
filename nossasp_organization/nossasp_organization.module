@@ -134,6 +134,8 @@ function nossasp_organization_require_address($form, &$form_state) {
 }
 
 function nossasp_organization_add_org_on_signup($form, &$form_state) { 
+  $form['body_field']['body']['#required'] = TRUE;
+  $form['primaryterm']['#required'] =TRUE;
   $form['group_tipo']['field_tipo']['value']['#type'] = 'select';
   unset($form['buttons']['preview']);
   $form['group_address']['field_street'][0]['value']['#autocomplete_path'] = 'openlayers/geocoder/response';
