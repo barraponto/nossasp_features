@@ -84,12 +84,9 @@ function nossasp_organization_form_alter(&$form, &$form_state, $form_id) {
   }
   elseif ($form_id == 'nossasp_organization_node_form') {
     $form['field_tipo']['#title'] = $form['field_atuacao']['#title'] = FALSE;
-    $form['#validate'][] = 'nossasp_organization_require_address';
-    if (user_access('create municipal councils')) {
-      drupal_add_js(drupal_get_path('module', 'nossasp_organization') . '/nossasp-organization-node-form.js');
-    }
     global $user;
     if ($user->uid == 0) {
+      drupal_add_js(drupal_get_path('module', 'nossasp_organization') . '/nossasp-organization-node-form.js');
       $form['#after_build'][] = 'nossasp_organization_add_org_on_signup';
       unset($form['body_field']['format']);
       unset($form['body_field']['teaser_js']);
@@ -99,7 +96,10 @@ function nossasp_organization_form_alter(&$form, &$form_state, $form_id) {
       $form['body_field']['body']['#resizable'] = FALSE;
       $form['body_field']['body']['#title'] = 'Faça uma breve descrição sobre as formas de atuação e participação promovidas pela organização (10 linhas)';
       $form['title']['#title'] = 'Nome da Organização';
-      $form['#validate'][] = 'nossasp_organization_savetheaddress';
+      $form['#submit'][] = 'nossasp_organization_savetheaddress';
+      if (isset($_POST['field_tipo']['value']) && $_POST['field_tipo']['value'] == '22') {
+        $form['field_street']['#required'] = $form['field_street'][0] = FALSE;
+      }
     }
   }
   elseif (in_array($form_id, array('contact_mail_page', 'user_login', 'user_pass'))) { 
@@ -127,19 +127,22 @@ function nossasp_organization_exposed_search($form, &$form_state) {
   return $form;
 }
 
-function nossasp_organization_require_address($form, &$form_state) {
-  if ($form_state['values']['field_tipo'][0]['value'] != '22' && empty($form_state['values']['field_street'][0]['value'])) {
-    form_set_error($form_state['values']['field_street'][0]['_error_element'], 'Apenas organizações virtuais podem ser cadastradas sem endereço.'); 
-  }
-}
-
 function nossasp_organization_add_org_on_signup($form, &$form_state) { 
   $form['body_field']['body']['#required'] = TRUE;
   $form['primaryterm']['#required'] =TRUE;
   $form['group_tipo']['field_tipo']['value']['#type'] = 'select';
   unset($form['buttons']['preview']);
   $form['group_address']['field_street'][0]['value']['#autocomplete_path'] = 'openlayers/geocoder/response';
+  $form['#validate'][] = 'nossasp_organization_no_address_for_virtual_orgs';
   return $form;
+}
+
+function nossasp_organization_no_address_for_virtual_orgs(&$form, &$form_state) {
+  if ($form_state['values']['field_tipo'][0]['value'] == '22') {
+    $form['group_address']['field_street']['#required'] = FALSE;
+    $form['group_address']['field_street'][0]['#required'] = FALSE;
+    $form['group_address']['field_street'][0]['value']['#required'] = FALSE;
+  }
 }
 
 function nossasp_organization_savetheaddress($form, &$form_state) {
