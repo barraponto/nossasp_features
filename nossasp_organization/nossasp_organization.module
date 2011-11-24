@@ -116,10 +116,21 @@ function nossasp_organization_exposed_search($form, &$form_state) {
   unset($form['circle']['location']['#field_prefix']);
   $form['circle']['min']['#access'] = $form['circle']['max']['#access'] = FALSE;
   $form['submit']['#weight'] = 0;
-
+  foreach ($form['term_node_tid_depth']['#options'] as $key => $option) {
+    if (is_object($option) && (strpos(reset($option->option), '-') === 0)) {
+      unset($form['term_node_tid_depth']['#options'][$key]);
+    }
+  }
+  foreach ($form['term_node_tid_depth_1']['#options'] as $key => $option) {
+    if (is_object($option) && (strpos(reset($option->option), '-') !== 0)) {
+      unset($form['term_node_tid_depth_1']['#options'][$key]);
+    }
+  }
 
   // Workaroud for the ugly <All> option
   $form['tid_1']['#options']['All'] = 'Todos os tipos de organização';
+  $form['term_node_tid_depth']['#options']['All'] = 'Todas';
+  $form['term_node_tid_depth_1']['#options']['All'] = 'Todos';
 
   // turn apply into OK
   $form['submit']['#value'] = 'Buscar';
