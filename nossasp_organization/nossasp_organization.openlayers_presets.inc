@@ -149,8 +149,8 @@ function nossasp_organization_openlayers_presets() {
     'behaviors' => array(
       'openlayers_behavior_popup' => array(
         'layers' => array(
+          'spdistritos' => 'spdistritos',
           'nossasp_organizations_all_openlayers_1' => 'nossasp_organizations_all_openlayers_1',
-          'nossasp_districts' => 0,
         ),
       ),
       'openlayers_behavior_fullscreen' => array(
@@ -168,8 +168,8 @@ function nossasp_organization_openlayers_presets() {
     'default_layer' => 'google_normal',
     'layers' => array(
       'google_normal' => 'google_normal',
+      'spdistritos' => 'spdistritos',
       'nossasp_organizations_all_openlayers_1' => 'nossasp_organizations_all_openlayers_1',
-      'nossasp_districts' => 'nossasp_districts',
     ),
     'layer_styles' => array(
       'nossasp_organizations_search_openlayers_1' => array(
@@ -187,8 +187,8 @@ function nossasp_organization_openlayers_presets() {
       ),
     ),
     'layer_activated' => array(
+      'spdistritos' => 'spdistritos',
       'nossasp_organizations_all_openlayers_1' => 'nossasp_organizations_all_openlayers_1',
-      'nossasp_districts' => 'nossasp_districts',
     ),
     'layer_switcher' => array(),
     'projection' => '900913',
