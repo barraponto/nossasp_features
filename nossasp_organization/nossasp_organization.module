@@ -94,7 +94,7 @@ function nossasp_organization_form_alter(&$form, &$form_state, $form_id) {
       unset($form['body_field']['#after_build']);
       $form['body_field']['body']['#rows'] = 5;
       $form['body_field']['body']['#resizable'] = FALSE;
-      $form['body_field']['body']['#title'] = 'Faça uma breve descrição sobre as formas de atuação e participação promovidas pela organização (10 linhas)';
+      $form['body_field']['body']['#title'] = 'Faça uma breve descrição sobre as formas de atuação e participação promovidas pela organização';
       $form['title']['#title'] = 'Nome da Organização';
       $form['#submit'][] = 'nossasp_organization_savetheaddress';
       if (isset($_POST['field_tipo']['value']) && $_POST['field_tipo']['value'] == '22') {
@@ -134,6 +134,7 @@ function nossasp_organization_add_org_on_signup($form, &$form_state) {
   unset($form['buttons']['preview']);
   $form['group_address']['field_street'][0]['value']['#autocomplete_path'] = 'openlayers/geocoder/response';
   $form['#validate'][] = 'nossasp_organization_no_address_for_virtual_orgs';
+  unset($form['group_tipo']['field_tipo']['value']['#options']['16']);
   return $form;
 }
 
